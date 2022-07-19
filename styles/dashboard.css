@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    
+}
+
+.dashboard{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.sidebar{
+    width: 25%;
+    /* position: fixed; */
+    background-color: #000000;
+    color: #fff;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+}
+
+.main{
+    width: 100%;
+    background : linear-gradient(90deg, #880fc4 0%, #1d39f2 100%);
+    height: 100vh;
+
+}
+
+.main-header{
+    display: flex;
+    flex: auto;
+    /* float: right; */
+    justify-content: space-between;
+    padding: 10px 8px 10px 8px;
+    color: #fff;
+}
+
+.main .main-header .hamburger{
+    font-size: 24px;
+    display: none;
+}
+
+.main .main-header  .user_id{
+    display: flex;
+    justify-content: ;
+}
+
+.main-header h4{
+    font-size: 24px;
+}
+
+.sidebar-button_container{
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+}
+
+.sidebar-buttons{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+border: 3px solid #de9f21;
+width: 250px;
+margin: 15px;
+padding: 10px 0 10px 0;
+cursor: pointer;
+}
+
+.sidebar-buttons h4{
+    font-size: 20px;
+}
+
+.main-card_container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.main-card_container .main-card{
+   width: 350px;
+   display: flex;
+   height: 150px;
+   background-color: #de9f21;
+   color: white;
+   font-size: 22px;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   margin: 10px;
+}
+
+.main-card_content{
+    color: #fff;
+}
+
+@media screen and (max-width:400px){
+    .sidebar{
+        display: none;
+    }
+
+    .main{
+        height: auto;
+    }
+
+    .main .main-card_container{
+        margin-top: 150px;
+    }
+
+    .main .main-header .hamburger{
+        display: block;
+    }
+}
