@@ -1,6 +1,6 @@
-*{
+* {
     padding: 0;
-    margin: 0;
+    margin : 0;
 }
 
 body,
@@ -11,23 +11,32 @@ input {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 
-.login{
-    display: flex;
+.login {
+    display        : flex;
     justify-content: center;
 }
 
 .container {
-    position        : relative;
-    display: flex;
-    text-align: center !important;
+    position           : relative;
+    display            : flex;
+    text-align         : center !important;
     /* background-color: #acacac; */
-    height: 500px;
-    width: 500px;
-    /* border: 5px solid black; */
-    margin-top: 10%;
-    align-items: center;
-    justify-content: center !important;
+    height             : 500px;
+    width              : 500px;
+    /* border          : 5px solid black; */
+    margin-top         : 10%;
+    align-items        : center;
+    justify-content    : center !important;
 
+}
+
+#alert {
+    display: none;
+}
+.alert-danger{
+    color: tomato;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -54,6 +63,7 @@ form {
     grid-template-columns: 15% 85%;
     padding              : 0 0.4rem;
     position             : relative;
+    align-items          : center;
 }
 
 .input-field i {
@@ -64,13 +74,13 @@ form {
 }
 
 .input-field input {
-    background : none;
-    outline    : none;
-    border     : none;
-    line-height: 1;
-    font-weight: 500;
-    font-size  : 1.2rem;
-    color      : #333;
+    background    : none;
+    outline       : none;
+    border        : none;
+    /* line-height: 1; */
+    font-weight   : 500;
+    font-size     : 1.2rem;
+    color         : #333;
 }
 
 .input-field input:placeholder-shown {
@@ -82,7 +92,7 @@ form {
     /* width           : 150px; */
     height          : 49px;
     outline         : none;
-    cursor: pointer;
+    cursor          : pointer;
     border          : none;
     border-radius   : 48px;
     background-color: #de9f21;
@@ -93,15 +103,17 @@ form {
     transition      : all .5s;
 }
 
-@media screen and (max-width:400px){
-  .title{
-    font-size: 1.9rem;
-  }
-  .input-field{
-    width: 300px;
-  }
-  .input-field input {
-    font-size:1.1rem;
-  }
- 
+@media screen and (max-width:400px) {
+    .title {
+        font-size: 1.9rem;
+    }
+
+    .input-field {
+        width: 300px;
+    }
+
+    .input-field input {
+        font-size: 1.1rem;
+    }
+
 }

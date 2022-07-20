@@ -1,0 +1,73 @@
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, #880fc4 0%, #1d39f2 100%);
+}
+
+main {
+    /* border: 3px greenyellow solid; */
+    margin-top:15%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+
+.card {
+    background-color: #fff;
+    padding         : 50px 60px 50px 60px;
+    border-radius   : 20px;
+    text-align      : center;
+    display         : flex;
+    flex-direction  : column;
+    /* line-height: 40px; */
+    justify-content : center;
+    /* width        : 650px; */
+    /* height       : 700px; */
+}
+
+.card-icon{
+
+
+}
+
+.card-icon i{
+    font-size: 80px;
+    width: 100px;
+    height: 100px;
+    background-color: #de9f21;
+    padding: 10px;
+    align-items: center;
+    /* justify-content: center; */
+    border-radius: 50%;
+    color: #fff;
+    /* color: white; */
+}
+
+.card-title h1 {
+    font-size  : 34px;
+    font-family: 'Trebuchet MS';
+    margin     : 10px 0 10px 0;
+}
+
+.card-body p {
+    font-size    : 18px;
+    margin-bottom: 12px;
+    color        : #575757e7;
+}
+
+.card-body .btn {
+    padding         : 15px 35px;
+    font-size       : 20px;
+    background      : transparent;
+    border          : none;
+    background-color: #de9f21;
+    color           : #f2eeee;
+    cursor          : pointer;
+    outline         : none;
+    border-radius   : 30px;
+}

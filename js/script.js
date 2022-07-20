@@ -66,15 +66,15 @@ function closeNav() {
   });
 
 
-  new Swiper(".swiper-container", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    autoplay: {
-        delay: 2000,
-        pauseOnMouseEnter: false
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-    },
-});
+//   new Swiper(".swiper-container", {
+//     slidesPerView: 1,
+//     spaceBetween: 30,
+//     autoplay: {
+//         delay: 2000,
+//         pauseOnMouseEnter: false
+//     },
+//     pagination: {
+//         el: ".swiper-pagination",
+//         clickable: true
+//     },
+// });

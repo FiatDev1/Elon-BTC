@@ -5,59 +5,60 @@ function LoginRequest(email, password) {
     cache: 'no-cache',
     headers: { 'Content-type': 'application/json' },
   })
-    .then((response) => {
-      return response.json()
-    })
-    .then((data) => {
-      if (
-        localStorage.getItem('login_data') != null ||
-        localStorage.getItem('login_data') != undefined
-      ) {
-        let logindata = JSON.parse(localStorage.getItem('login_data'))
-
-        if (logindata.id == data.id) {
-          // do nothing
-        } else {
-          logindata.append({
-            id: data.id,
-            fullname: data.fullname,
-            email: data.email,
-            created: data.created,
-            modified: data.modified,
-            status: data.status,
-            state: data.state,
-          })
-          localStorage.setItem('login_data', JSON.stringify(logindata))
-          console.log('Data truncated!')
-        }
-      } else {
-        let login_data = [];
-
-        login_data.append({
-          id: data.id,
-          fullname: data.fullname,
-          email: data.email,
-          created: data.created,
-          modified: data.modified,
-          status: data.status,
-          state: data.state,
-        })
-        localStorage.setItem('login_data', JSON.stringify(logindata));
-        console.log(data);
-        redirect('./dashboard.html')
+  .then((response) => {
+    return response.json()
+  })
+  .then((data) => {
+    console.log(data)
+    if(!data.status){
+      showalert('alert-danger', data.message);
+    }else{
+      if (createSession(data)) {
+        redirect('./validate.html')
       }
-    })
-    .catch((err) => {
-      console.error(err)
-    })
+    }
+    
+  })
+}
 
-  function redirect(url) {
-    let home_url = document.createElement('a')
-    let container = document.getElementById('loginContainer')
+function createSession(data){
+  sessionStorage.setItem('id', data.id);
+  sessionStorage.setItem('fullname', data.email);
+  sessionStorage.setItem('id', data.id);
+  sessionStorage.setItem('id', data.id);
+  sessionStorage.setItem('id', data.id);
+  sessionStorage.setItem('id', data.id);
 
-    home_url.hidden = true
-    home_url.src = url
-    container.append(home_url)
-    home_url.click()
+}
+
+function showalert(type, message){
+  let alert = document.getElementById('alert')
+  alert.innerHTML = "<i class='fa fa-info-circle'></i>" + message;
+  alert.style.display = 'block'
+  if(type == "alert-danger"){
+    alert.classList.add('alert-danger');
   }
 }
+
+function redirect(url) {
+  let home_url = document.createElement('a')
+  let container = document.getElementById('loginContainer')
+
+  home_url.hidden = true
+  home_url.src = url
+  container.append(home_url)
+  home_url.click()
+}
+
+
+function SignupRequest(fullname, email, password) {
+  $.post(
+    './api/createAccount.php',
+    { fullname: fullname, email: email, password: password },
+    (e) => {
+      console.log(e)
+      redirect('')
+    },
+  )
+}
+

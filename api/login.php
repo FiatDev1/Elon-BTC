@@ -22,6 +22,7 @@ if ($_REQUEST) {
                 $res["created"] = $user->created;
                 $res["modified"] = $user->modified;
                 $res["state"] = true;
+                $res["status"] = true;
 
                 $response = json_encode($res);
 
