@@ -7,45 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="styles/dashboard.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="shortcut icon" href="./images/bitcoin-btc-logo.svg" type="image/x-icon">
+
 </head>
 
 <body>
+    <div class="nav">
+        <div class="logo">
+            <span class="logoTxt">ElonBTC</span>
+        </div>
+    </div>
     <div class="dashboard">
         <div class="sidebar">
-            <div class="sidebar-button_container">
-                <div class="sidebar-buttons">
-                    <h4>Income</h4>
-                </div>
-                <div class="sidebar-buttons">
-                    <h4>Deposits</h4>
-                </div>
-                <div class="sidebar-buttons">
-                    <h4>Withdrawal</h4>
-                </div>
-                <div class="sidebar-buttons">
-                    <h4>Change Password</h4>
-                </div>
+            <div class="sidebar-links-container">
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Deposits</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Withdrawal</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
+                <a onclick="Logout()" class="sidebar-links"><i class="fa fa-money"></i> Logout</a>
             </div>
         </div>
-
-        <div class="sidebar">
-            <div class="sidebar-button_container">
-                <div class="sidebar-buttons">
-                    <h4>Income</h4>
-                </div>
-                <div class="sidebar-buttons">
-                    <h4>Deposits</h4>
-                </div>
-                <div class="sidebar-buttons">
-                    <h4>Withdrawal</h4>
-                </div>
-                <div class="sidebar-buttons">
-                    <h4>Change Password</h4>
-                </div>
-            </div>
-        </div>
-
         <div class="main">
             <div class="main-header">
                 <div class="hamburger"><i class="fas fa-bars"></i></div>
@@ -98,5 +81,6 @@
     </div>
 
 </body>
-
+<script src="js/requests.js"></script>
+<script src="js/session.js"></script>
 </html>

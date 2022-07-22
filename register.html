@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mayor Mine</title>
+    <title>Sign up</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
@@ -54,7 +54,7 @@
 
     </div>
 
-    <!-- <ul class="circles">
+    <ul class="circles">
         <li></li>
         <li></li>
         <li></li>
@@ -65,30 +65,33 @@
         <li></li>
         <li></li>
         <li></li>
-    </ul> -->
+    </ul>
     <main>
 
         <div class="login">
-
-
             <div class="container">
                 <div class="form-container">
                     <div class="signin-signup">
                         <form action="#" class="sign-in-form">
                             <h2 class="title">Register</h2>
+                            <div class="alert" id="alert"></div>
                             <div class="input-field">
                                 <i class="fas fa-user"></i>
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" placeholder="Name" id="fullname" required>
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-envelope"></i>
-                                <input type="text" placeholder="Email" required>
+                                <input type="text" placeholder="Email" id="email" required>
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" placeholder="Password" required>
+                                <input type="password" placeholder="Password" id="rgstpsw" required>
                             </div>
-                            <input type="submit" class="btn" value="CREATE ACCOUNT">
+                            <div class="input-field">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Password" id="confirmpsw" required>
+                            </div>
+                            <button type="button" class="btn" onclick="SignUp()">Create Account</button>
                         </form>
                     </div>
                 </div>
@@ -98,18 +101,13 @@
 
     </main>
 
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
 </body>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/events.js"></script>
+<script src="js/requests.js"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
 </html>

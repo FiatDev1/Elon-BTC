@@ -114,6 +114,7 @@ nav ul li a {
   cursor         : pointer;
   position       : relative;
   padding        : 5px 0;
+  outline: none;
 }
 
 nav .button{

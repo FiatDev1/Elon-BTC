@@ -78,6 +78,7 @@ class User
         if ($count > 0) {
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
+            $this->id = $row['id'];
             $this->fullname = $row['fullname'];
             $this->email = $row['email'];
             $this->password = $row['password'];

@@ -5,59 +5,101 @@ function LoginRequest(email, password) {
     cache: 'no-cache',
     headers: { 'Content-type': 'application/json' },
   })
-    .then((response) => {
-      return response.json()
-    })
-    .then((data) => {
-      if (
-        localStorage.getItem('login_data') != null ||
-        localStorage.getItem('login_data') != undefined
-      ) {
-        let logindata = JSON.parse(localStorage.getItem('login_data'))
+  .then((response) => {
+    return response.json()
+  })
+  .then((data) => {
+    console.log(data);
+    !data.status && data.err == 404 ? showAlert('alert-danger', data.message) : session_start(data);
+  });
+}
 
-        if (logindata.id == data.id) {
-          // do nothing
-        } else {
-          logindata.append({
-            id: data.id,
-            fullname: data.fullname,
-            email: data.email,
-            created: data.created,
-            modified: data.modified,
-            status: data.status,
-            state: data.state,
-          })
-          localStorage.setItem('login_data', JSON.stringify(logindata))
-          console.log('Data truncated!')
-        }
-      } else {
-        let login_data = [];
+function showAlert(type, message){
+  let alert = document.getElementById("alert");
+  alert.innerHTML = message;
+  
+  switch (type) {
+    case 'alert-danger':
+      alert.classList.add('alert-danger');
+      break;
+    case 'alert-caution':
+      alert.classList.add('alert-caution');
+      break;
+    case 'alert-safe':
+      alert.classList.add('alert-safe');
+      break; 
+    default:
+      alert.classList.add('alert-info');
+      break;
+  }
+  alert.classList.add('show');
+}
 
-        login_data.append({
-          id: data.id,
-          fullname: data.fullname,
-          email: data.email,
-          created: data.created,
-          modified: data.modified,
-          status: data.status,
-          state: data.state,
-        })
-        localStorage.setItem('login_data', JSON.stringify(logindata));
-        console.log(data);
-        redirect('./dashboard.html')
-      }
-    })
-    .catch((err) => {
-      console.error(err)
-    })
+function session_start(data){
+  if (createSession(data)) {
+    redirect('./dashboard.html');
+    console.log(sessionStorage.getItem("id"));
+  }
+}
 
-  function redirect(url) {
-    let home_url = document.createElement('a')
-    let container = document.getElementById('loginContainer')
+function session_destroy(){
+  sessionStorage.clear();
 
-    home_url.hidden = true
-    home_url.src = url
-    container.append(home_url)
-    home_url.click()
+  return true;
+}
+function createSession(data) {
+  sessionStorage.setItem('id', data.id);
+  sessionStorage.setItem('fullname', data.fullname);
+  sessionStorage.setItem('email', data.email);
+  sessionStorage.setItem('access_code', data.access_code);
+  sessionStorage.setItem('access_level', data.access_level);
+  sessionStorage.setItem('created', data.created);
+  sessionStorage.setItem('modified', data.modified);
+  sessionStorage.setItem('state', data.state);
+
+  return true;
+}
+
+function redirect(url) {
+  let home_url = document.createElement('a')
+
+  home_url.hidden = true;
+  home_url.href = url;
+  document.body.appendChild(home_url);
+  home_url.click();
+}
+
+
+function SignupRequest(fullname, email, password) {
+  // fetch("./api/createAccount.php", {
+  //   method: 'POST',
+  //   mode: 'no-cors',
+  //   cache: 'no-cache',
+  //   headers: { 'Content-type': 'application/json' },
+  //   body : {
+  //     fullname : fullname,
+  //     email : email,
+  //     password : password,
+  //   }
+  // })
+  // .then(data => {
+  //   return data.json(),
+  // }).then(res=>{
+
+  // })
+
+  $.post(
+    './api/createAccount.php',
+    { fullname: fullname, email: email, password: password },
+    (e) => {
+      console.log(e.json());
+      redirect('')
+    },
+  )
+}
+
+function Logout(){
+  if(session_destroy()){
+    redirect("./login.html");
   }
 }
