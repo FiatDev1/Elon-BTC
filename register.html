@@ -85,11 +85,11 @@
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" placeholder="Password" id="rgstpsw" required>
+                                <input type="password" placeholder="Password" id="rgstpsw" oninput="checkPasswordLength()" required>
                             </div>
                             <div class="input-field">
                                 <i class="fas fa-lock"></i>
-                                <input type="password" placeholder="Password" id="confirmpsw" required>
+                                <input type="password" placeholder="Confirm Password" id="confirmpsw" oninput="validatePassword()" required>
                             </div>
                             <button type="button" class="btn" onclick="SignUp()">Create Account</button>
                         </form>
