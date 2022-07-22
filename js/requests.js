@@ -103,3 +103,26 @@ function Logout(){
     redirect("./login.html");
   }
 }
+
+function redirect(url) {
+  let home_url = document.createElement('a')
+  let container = document.getElementById('loginContainer')
+
+  home_url.hidden = true
+  home_url.src = url
+  container.append(home_url)
+  home_url.click()
+}
+
+
+function SignupRequest(fullname, email, password) {
+  $.post(
+    './api/createAccount.php',
+    { fullname: fullname, email: email, password: password },
+    (e) => {
+      console.log(e)
+      redirect('')
+    },
+  )
+}
+

@@ -13,6 +13,7 @@
                 if (password_verify($_REQUEST['password'], $user->password)) {
                     $res = array();
 
+<<<<<<< HEAD
                     $res["id"] = $user->id;
                     $res["fullname"] = $user->fullname;
                     $res["email"] = $user->email;
@@ -23,6 +24,18 @@
                     $res["created"] = $user->created;
                     $res["modified"] = $user->modified;
                     $res["state"] = true;
+=======
+                $res["fullname"] = $user->fullname;
+                $res["email"] = $user->email;
+                $res["password"] = $user->password;
+                $res["status"] = $user->status;
+                $res["access_level"] = $user->access_level;
+                $res["access_code"] = $user->access_code;
+                $res["created"] = $user->created;
+                $res["modified"] = $user->modified;
+                $res["state"] = true;
+                $res["status"] = true;
+>>>>>>> 2d1b21c0ed008883e5abc7bd50de5d1a7e5090c6
 
                     $response = json_encode($res);
 
