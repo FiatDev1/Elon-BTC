@@ -12,7 +12,7 @@ body {
   font-family   : "roboto", sans-serif;
 }
 
-.my_bttn {
+/* .my_bttn {
   height          : 45px;
   width           : 45px;
   background-color: white;
@@ -24,13 +24,11 @@ body {
   border-radius   : 5px;
   cursor          : pointer;
   outline         : none;
-  /* display      : none; */
-}
+} */
 
-.my_bttn:hover {
+/* .my_bttn:hover {
   transform: scale(1.05) translateY(-5px);
-
-}
+} */
 
 main {
   margin-top: 80px;
@@ -46,7 +44,6 @@ main {
   color           : #f2eeee;
   cursor          : pointer;
   outline         : none;
-  /* text-decoration: none; */
 }
 
 
@@ -79,7 +76,7 @@ nav {
   left           : 0;
   right          : 0;
   overflow       : hidden;
-  z-index        : 999;
+  z-index        : 9999;
 }
 
 
