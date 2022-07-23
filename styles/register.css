@@ -80,7 +80,7 @@ form {
 
 .btn {
     /* width           : 150px; */
-    height          : 49px;
+    padding: 15px;
     outline         : none;
     cursor          : pointer;
     border          : none;

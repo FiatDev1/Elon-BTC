@@ -56,3 +56,8 @@ main {
     outline         : none;
     border-radius   : 30px;
 }
+.vrfycardbyd{
+    padding: 10px 50px;
+    display: block;
+    text-align: center;
+}

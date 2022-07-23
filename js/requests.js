@@ -9,7 +9,6 @@ function LoginRequest(email, password) {
     return response.json()
   })
   .then((data) => {
-    console.log(data);
     if(!data.state && data.err == 404){
       showAlert('alert-danger', data.message);
     }else{
@@ -19,6 +18,47 @@ function LoginRequest(email, password) {
   });
 }
 
+function SignupRequest(fullname, email, password) {
+  fetch("./api/createAccount.php?fullname=" + fullname + "&email=" + email + "&password=" + password, {
+    method: 'GET',
+    mode: 'no-cors',
+    cache: 'no-cache',
+    headers: { 'Content-type': 'application/json' }
+  })
+  .then(response  => {
+    return response.json();
+  }
+  ).then(res =>{
+    if(!res.state){
+      showAlert('alert-danger', res.message);
+    }else{
+      showAlert('alert-safe', res.message + " You'll be redirected.");
+      setTimeout(()=>{
+        redirect('./verify');
+      }, 3000);
+    }
+  })
+}
+
+function EmailExistsRequest(email){
+  fetch("./api/EmailValidation.php?email=" + email, {
+    method: 'GET',
+    mode: 'no-cors',
+    cache: 'no-cache',
+    headers: { 'Content-type': 'application/json' }
+  })
+  .then(response  => {
+    return response.json();
+  }
+  ).then(res =>{
+    if(!res.state){
+      showAlert('alert-danger', res.message);
+    }else{
+      let alert = document.getElementById("alert");
+      alert.classList.remove("show");
+    }
+  })
+}
 function showAlert(type, message){
   let alert = document.getElementById("alert");
   alert.innerHTML = message;
@@ -42,7 +82,7 @@ function showAlert(type, message){
 
 function session_start(data){
   if (createSession(data)) {
-    redirect('./dashboard.html');
+    redirect('./dashboard');
     console.log(sessionStorage.getItem("id"));
   }
 }
@@ -74,49 +114,9 @@ function redirect(url) {
   home_url.click();
 }
 
-
-function SignupRequest(fullname, email, password) {
-  // fetch("./api/createAccount.php", {
-  //   method: 'POST',
-  //   mode: 'no-cors',
-  //   cache: 'no-cache',
-  //   headers: { 'Content-type': 'application/json' },
-  //   body : {
-  //     fullname : fullname,
-  //     email : email,
-  //     password : password,
-  //   }
-  // })
-  // .then(data => {
-  //   return data.json(),
-  // }).then(res=>{
-
-  // })
-
-  $.post(
-    './api/createAccount.php',
-    { fullname: fullname, email: email, password: password },
-    (e) => {
-      console.log(e.json());
-      redirect('')
-    },
-  )
-}
-
 function Logout(){
   if(session_destroy()){
-    redirect("./login.html");
+    redirect("./login");
   }
-}
-
-function SignupRequest(fullname, email, password) {
-  $.post(
-    './api/createAccount.php',
-    { fullname: fullname, email: email, password: password },
-    (e) => {
-      console.log(e)
-      redirect('')
-    },
-  )
 }
 
