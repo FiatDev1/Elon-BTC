@@ -10,7 +10,12 @@ function LoginRequest(email, password) {
   })
   .then((data) => {
     console.log(data);
-    !data.status && data.err == 404 ? showAlert('alert-danger', data.message) : session_start(data);
+    if(!data.state && data.err == 404){
+      showAlert('alert-danger', data.message);
+    }else{
+      session_start(data);
+    }
+    //!data.state && data.err == 404 ? showAlert('alert-danger', data.message) : session_start(data);
   });
 }
 
@@ -103,17 +108,6 @@ function Logout(){
     redirect("./login.html");
   }
 }
-
-function redirect(url) {
-  let home_url = document.createElement('a')
-  let container = document.getElementById('loginContainer')
-
-  home_url.hidden = true
-  home_url.src = url
-  container.append(home_url)
-  home_url.click()
-}
-
 
 function SignupRequest(fullname, email, password) {
   $.post(

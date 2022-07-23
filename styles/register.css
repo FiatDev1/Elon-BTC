@@ -30,16 +30,6 @@ input {
 
 }
 
-#alert {
-    display: none;
-}
-.alert-danger{
-    color: tomato;
-    font-size: small;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
 form {
     display        : flex;
     flex-direction : column;

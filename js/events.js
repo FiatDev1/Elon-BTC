@@ -7,20 +7,28 @@ function Login() {
 
 function checkPasswordLength(){
   let psw = document.getElementById('rgstpsw');
+  let alert = document.getElementById("alert");
 
   if(psw.value.length < 8){
+    console.log("Password must not be less than 8 characthers");
     showAlert("alert-caution", "Password must not be less than 8 characthers");
+  }else{
+    alert.classList.remove("show");
   }
 }
 
 function validatePassword(){
   let psw = document.getElementById('rgstpsw');
   let confirmpassword = document.getElementById('confirmpsw');
+  let alert = document.getElementById("alert");
 
   if (psw.value != confirmpassword.value) {
     showAlert('alert-caution', "The passwords you provided do not match!");
+  }else{
+    alert.classList.remove("show");
   }
 }
+
 function SignUp() {
   let fullname = document.getElementById('fullname');
   let email = document.getElementById('email');
