@@ -11,9 +11,17 @@ body{
     display: block;
     background: linear-gradient(30deg, #880fc4, #1d39f2);
 }
+
 .logo{
-    display: inline-block;
+    display: flex;
+    align-items: center;
 }
+
+.logo img {
+    width : 45px;
+    height: 45px;
+  }
+
 .logoTxt{
     color: #fff;
     font-weight: bold;
@@ -111,8 +119,45 @@ body{
    padding: 25px;
 }
 
+.main-card .main-card_content{
+    display: flex;
+    flex-direction: row;
+    padding: 15px 0;
+}
+
 .main-card_content{
     color: #fff;
+    align-items: center;
+    /* display: block; */
+}
+
+.main-card_content h3{
+    font-size: 45px;
+    padding: 10px;
+}
+
+.card-price{
+  text-align: center;
+  display: block;
+}
+
+.card-price .balance{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.card-txt{
+    font-size: 18px;
+    text-align: right;
+    display: block;
+}
+
+.card-icon i{
+    font-size: 60px;
+    text-align: right;
+    display: block;
+    padding: 10px;
+    margin-top: 15px;
 }
 
 @media screen and (max-width:400px){
