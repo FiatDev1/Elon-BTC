@@ -10,7 +10,6 @@ function checkPasswordLength(){
   let alert = document.getElementById("alert");
 
   if(psw.value.length < 8){
-    console.log("Password must not be less than 8 characthers");
     showAlert("alert-caution", "Password must not be less than 8 characthers");
   }else{
     alert.classList.remove("show");
@@ -36,7 +35,7 @@ function SignUp() {
   let confirmpassword = document.getElementById('confirmpsw');
   let alert = document.getElementById('alert');
 
-  if(fullname.value != null && email.value != null && password.value != null && confirmpassword.value != null){
+  if(fullname.value != null && email.value != null && psw.value != null && confirmpassword.value != null){
     if (psw.value.length >= 8) {
       if (psw.value != confirmpassword.value) {
         showAlert('alert-danger', "The passwords you provided do not match!");
