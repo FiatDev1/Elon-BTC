@@ -9,7 +9,8 @@ function LoginRequest(email, password) {
     return response.json()
   })
   .then((data) => {
-    if(!data.state && data.err == 404){
+    console.log(data.status);
+    if(data.state == false || data.err == 404){
       showAlert('alert-danger', data.message);
     }else{
       session_start(data);
@@ -82,8 +83,11 @@ function showAlert(type, message){
 
 function session_start(data){
   if (createSession(data)) {
-    redirect('./dashboard');
-    console.log(sessionStorage.getItem("id"));
+    if(data.access_level == 'user' && data.status == 1){
+      redirect('./dashboard');
+    }else if(data.access_level == 'admin' && data.status == 1){
+      redirect('./admin/dashboard');
+    }
   }
 }
 
