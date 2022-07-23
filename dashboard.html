@@ -18,6 +18,7 @@
             <img src="images/bitcoin-btc-logo.svg" alt="">
             <span class="logoTxt">ElonBTC</span>
         </div>
+        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
     </div>
     <div class="dashboard">
         <div class="sidebar">
@@ -30,9 +31,20 @@
                 <a onclick="Logout()" class="sidebar-links"><i class="fa fa-money"></i> Logout</a>
             </div>
         </div>
+
+        <div class="sideNav" id="sidenav">
+        <span class="closeBtn" id="close"><i class="fas fa-times"></i></span>
+            <div class="sidebar-links-container">
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Deposits</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Withdrawal</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
+                <a onclick="Logout()" class="sidebar-links"><i class="fa fa-money"></i> Logout</a>
+            </div>
+        </div>
         <div class="main">
             <div class="main-header">
-                <div class="hamburger"><i class="fas fa-bars"></i></div>
             </div>
             <div class="main-card_container">
                 <div class="main-card">
@@ -84,6 +96,8 @@
     </div>
 
 </body>
+
+<script src="js/script.js"></script>
 <script src="js/requests.js"></script>
 <script src="js/session.js"></script>
 
