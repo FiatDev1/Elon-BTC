@@ -20,7 +20,6 @@ input {
     position           : relative;
     display            : flex;
     text-align         : center !important;
-    /* background-color: #acacac; */
     height             : 500px;
     width              : 500px;
     /* border          : 5px solid black; */
@@ -67,7 +66,6 @@ form {
     background    : none;
     outline       : none;
     border        : none;
-    /* line-height: 1; */
     font-weight   : 500;
     font-size     : 1.2rem;
     color         : #333;
@@ -79,7 +77,7 @@ form {
 }
 
 .btn {
-    /* width           : 150px; */
+    width           : 150px;
     height          : 49px;
     outline         : none;
     cursor          : pointer;
@@ -93,7 +91,17 @@ form {
     transition      : all .5s;
 }
 
-@media screen and (max-width:400px) {
+.other-links{
+    color: #f0f0f0;
+}
+
+.other-links a{
+    color: #de9f21;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media screen and (max-width:568px) {
     .title {
         font-size: 1.9rem;
     }
