@@ -9,9 +9,11 @@ if ($_REQUEST) {
     $user = new User($db);
 
     $user->fullname = $_REQUEST['fullname'];
+    $user->email = $_REQUEST['email'];
     $user->password = $_REQUEST['password'];
-    $user->status = $_REQUEST['status'];
-    $user->created = $_REQUEST['created'];
+    $user->access_level = 'user';
+    $user->access_code = '';
+    $user->status = 0;
 
     if (isset($_REQUEST['fullname']) && !empty($_REQUEST['fullname']) && isset($_REQUEST['email']) && !empty($_REQUEST['email']) && isset($_REQUEST['password']) && !empty($_REQUEST['password'])) {
         if($user->emailExist($_REQUEST['email'])){
@@ -21,21 +23,30 @@ if ($_REQUEST) {
             $res['err'] = 301;
             $res['state'] = false;
 
-            return $res;
+            $response = json_encode($res);
+
+            echo $response;
+            return $response;
         }else{
+            $res = array();
+
             if ($user->createAccount()) {
-                $_REQUEST = [];
+                $_REQUEST = array();
                 
                 $res['message'] = "Account has been sucessfully created!";
                 $res['err'] = null;
                 $res['state'] = true;
 
-                echo "Account has been created!";
-                return true;
             } else {
-                echo "Something went wrong! That's all we know.";
-                return true;
+                $res['message'] = "Something went wrong! That's all we know.";
+                $res['err'] = 404;
+                $res['state'] = false;
             }
+
+            $response = json_encode($res);
+
+            echo $response;
+            return $response;
         }
     } else {
         echo "Invalid Request!";

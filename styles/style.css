@@ -36,17 +36,22 @@ main {
 }
 
 .button {
-  padding         : 10px 30px;
-  font-size       : 20px;
+  padding         : 8px 15px;
   background      : transparent;
-  border          : none;
-  background-color: #de9f21;
-  color           : #f2eeee;
+  color           : #de9f21;
   cursor          : pointer;
   outline         : none;
+  border: 2px solid #de9f21;
+  border-radius: 20px;
+  transition: 0.3s ease all;
+  margin-left: 10px;
 }
 
-
+.button:hover{
+  background-color: #de9f21;
+  color: #fff;
+  transition: 0.3s ease all;
+}
 .logo-img {
   width : 50px;
   height: 50px;
@@ -94,28 +99,27 @@ nav .logo img {
 }
 
 nav ul {
-  display   : flex;
+  display: block;
   list-style: none;
 }
 
 nav ul li {
-  padding: 8px 15px;
+  padding: 15px;
+  display: inline-block;
 }
 
 nav ul li a {
   color          : white;
-  font-size      : 20px;
-  font-weight    : 500;
   text-decoration: none;
   cursor         : pointer;
   position       : relative;
-  padding        : 5px 0;
+  padding        : 10px 0px;
   outline: none;
 }
 
 nav .button{
-text-decoration: none;
-color: white;
+  text-decoration: none;
+  color: white;
 }
 
 nav ul li a:hover {
@@ -139,6 +143,9 @@ nav ul li a:before {
 nav ul li a:hover:before {
   transform       : scaleX(1);
   transform-origin: left;
+}
+.loginBtn{
+  color: #de9f21;
 }
 
 .sideNav {

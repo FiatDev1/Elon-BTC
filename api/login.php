@@ -32,7 +32,7 @@
 
                     $res["message"] = "Incorrect Password!";
                     $res['err'] = 404;
-                    $res["status"] = false;
+                    $res["state"] = false;
 
                     $response = json_encode($res);
 
@@ -43,7 +43,7 @@
                 $res = array();
 
                 $res["message"] = "Account does not exist!";
-                $res["status"] = false;
+                $res["state"] = false;
 
                 $response = json_encode($res);
 

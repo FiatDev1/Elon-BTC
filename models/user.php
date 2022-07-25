@@ -84,6 +84,7 @@ class User
             $this->password = $row['password'];
             $this->access_code = $row['access_code'];
             $this->access_level = $row['access_level'];
+            $this->status = $row['status'];
             $this->created = $row['created'];
             $this->modified = $row['modified'];
 
