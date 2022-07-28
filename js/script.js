@@ -49,6 +49,11 @@ function closeNav() {
   }
 
 
+  document.getElementById('button').addEventListener('click', function() {
+    document.querySelector('.bg-modal').style.display = 'flex';
+});
+
+
   $(document).ready(function(){
     $(window).scroll(function(){
       if($(window).scrollTop()>300){

@@ -8,11 +8,14 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="styles/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles/cards.css">
     <link rel="shortcut icon" href="./images/bitcoin-btc-logo.svg" type="image/x-icon">
 
 </head>
 
 <body>
+
+    <!-- ==========Top Navigation======= -->
     <div class="nav">
         <div class="logo">
             <img src="images/bitcoin-btc-logo.svg" alt="">
@@ -20,85 +23,161 @@
         </div>
         <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
     </div>
+
+    <!-- ==========Dashboard Container======= -->
+
     <div class="dashboard">
+
+        <!-- ==========Pc Sidebar======= -->
+
         <div class="sidebar">
+            <div class="sidebar-profile">
+                <div><img src="images/avatar.png" class="sidebar-profile-pix" alt=""></div>
+                <div class="sidebar-user-info">
+                    <span class="sidebar-username">Fiatmoney</span>
+                    <span class="sidebar-email">user@mail.com</span>
+                </div>
+            </div>
+            <div class="sidebar-links-container">
+                <a href="#" class="sidebar-links"><i class="fa fa-layer-group"></i> Dashboard</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-user"></i> My Profile</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-wallet"></i> Wallet Deposit</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-paper-plane"></i> Transfer Fund</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-download"></i> Withdrawal</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-users"></i> Refferals</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-headset"></i> Contact Support</a>
+                <a onclick="Logout()" class="sidebar-links"><i class="fa fa-arrow-right-from-bracket"></i> Logout</a>
+            </div>
+        </div>
+
+
+        <!-- ==========Mobile Sidebar======= -->
+
+        <div class="sideNav" id="sidenav">
+            <span class="closeBtn" id="close"><i class="fas fa-times"></i></span>
             <div class="sidebar-links-container">
                 <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
                 <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Deposits</a>
                 <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Withdrawal</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i>Transaction History</a>
                 <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
                 <a onclick="Logout()" class="sidebar-links"><i class="fa fa-money"></i> Logout</a>
             </div>
         </div>
 
-        <div class="sideNav" id="sidenav">
-        <span class="closeBtn" id="close"><i class="fas fa-times"></i></span>
-            <div class="sidebar-links-container">
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Deposits</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Withdrawal</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
-                <a onclick="Logout()" class="sidebar-links"><i class="fa fa-money"></i> Logout</a>
-            </div>
-        </div>
+        <!-- ==========main content======= -->
+
         <div class="main">
-            <div class="main-header">
+
+            <div class="live-cryptodata-container" id="cryptodata-container"></div>
+
+            <div class="stats-card">
+
+                <!-- card 1 -->
+
+                <div class="stats-card-child">
+                    <svg viewBox="0 0 36 36" class="circular-chart green">
+                        <path class="circle-bg" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="18" y="20.35" class="percentage">60%</text>
+                    </svg>
+                    <span class="labelText">Investments</span>
+                </div>
+
+                <!-- card 2 -->
+
+                <div class="card-round-stats">
+                    <svg viewBox="0 0 36 36" class="circular-chart green">
+                        <path class="circle-bg" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="18" y="20.35" class="percentage">60%</text>
+                    </svg>
+                    <span class="labelText">Withdrawal</span>
+                </div>
+
+                <!-- card 3 -->
+
+                <div class="card-round-stats">
+                    <svg viewBox="0 0 36 36" class="circular-chart green">
+                        <path class="circle-bg" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="18" y="20.35" class="percentage">60%</text>
+                    </svg>
+                    <span class="labelText">Refferals</span>
+                </div>
+
             </div>
-            <div class="main-card_container">
-                <div class="main-card">
-                    <div class="main-card_content">
-                        <div class="card-price">
-                            <span class="balance">$10000</span></div>
-                        <div class="card-icon">
-                            <i class="fas fa-money-check"></i>
-                            <span class="card-txt">Available Balance</span>
-                        </div>
+
+
+            <div class="stats-card-child">
+
+            </div>
+        </div>
+        <!-- <div class="main-header">
+            </div> -->
+
+        <!-- ==========Dashboard Cards======= -->
+        <div class="main-card_container">
+            <div class="main-card">
+                <div class="main-card_content">
+                    <div class="card-price">
+                        <span class="balance">$10000</span>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fas fa-money-check"></i>
+                        <span class="card-txt">Available Balance</span>
                     </div>
                 </div>
-                <div class="main-card">
-                    <i class="fa fa-money-check"></i>
-                    <div class="main-card_content">
-                        <h3>$900.00</h3>
-                        <span class="card-txt">Invested amount</span>
-                    </div>
+            </div>
+            <div class="main-card">
+                <i class="fa fa-money-check"></i>
+                <div class="main-card_content">
+                    <h3>$900.00</h3>
+                    <span class="card-txt">Invested amount</span>
                 </div>
-                <div class="main-card">
-                    <i class="fas fa-money"></i>
-                    <div class="main-card_content">
-                        <h3>$1500.00</h3>
-                        <span class="card-txt">Earned Total</span>
-                    </div>
-                </div>
-                <div class="main-card">
-                    <i class="fas fa-money"></i>
-                    <div class="main-card_content">
-                        <h3>$800.00</h3>
-                        <span class="card-txt">Active Deposit</span>
-                    </div>
-                </div>
-                <div class="main-card">
-                    <i class="fas fa-money"></i>
-                    <div class="main-card_content">
-                        <h3>$2000.00</h3>
-                        <span class="card-txt">Withdrew Total</span>
-                    </div>
-                </div>
-                <div class="main-card">
-                    <i class="fas fa-money"></i>
-                    <div class="main-card_content">
-                        <span class="card-txt">Wallet Address</span>
-                    </div>
+            </div>
+            <div class="main-card">
+                <i class="fas fa-money"></i>
+                <div class="main-card_content">
+                    <h3>$1500.00</h3>
+                    <span class="card-txt">Earned Total</span>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 </body>
 
 <script src="js/script.js"></script>
 <script src="js/requests.js"></script>
-<script src="js/session.js"></script>
+<!-- <script src="js/session.js"></script> -->
+
+<!-- maybe later -->
+
+
+<!-- <div class="card-round-stats">
+                        <svg viewBox="0 0 36 36" class="circular-chart orange">
+                            <path class="circle-bg" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="30, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="18" y="20.35" class="percentage">30%</text>
+                        </svg>
+                    </div> -->
 
 </html>

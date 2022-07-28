@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Deposit</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/deposit.css">
+    <link rel="stylesheet" href="styles/change-password.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="shortcut icon" href="./images/bitcoin-btc-logo.svg" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="images/bitcoin-btc-logo.svg" alt="">
+            <span class="logoTxt">ElonBTC</span>
+        </div>
+        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+    </div>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="sidebar-links-container">
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Dashboard</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Deposits</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Withdrawal</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Transaction History</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
+                <a href="#"class="sidebar-links"><i class="fa fa-money"></i> Settings</a>
+                <a onclick="Logout()" class="sidebar-links"><i class="fa fa-money"></i> Logout</a>
+            </div>
+        </div>
+
+        <div class="sideNav" id="sidenav">
+            <span class="closeBtn" id="close"><i class="fas fa-times"></i></span>
+            <div class="sidebar-links-container">
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Deposits</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Withdrawal</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i>Transaction History</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
+                <a onclick="Logout()" class="sidebar-links"><i class="fa fa-money"></i> Logout</a>
+            </div>
+        </div>
+
+
+        <div class="main">
+            <div class="main-container">
+                <h1>Deposit</h1>
+                <div>
+                    <input type="text" name="" id="" placeholder="Enter Wallet Address" required>
+
+                <input type="text"  name="" id="" placeholder="Amount to deposit" required>
+
+                <textarea name="" id="" cols="30" rows="10" placeholder="Description"></textarea>
+
+                <button>Pay Now</button>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+    <div class="bg-modal">
+        <div class="modal-content">
+            <div class="close">+</div>
+            <h1>Transfer Your Bitcoin to the address Below</h1>
+            <h4>YUGVYUF7FY687g8f87f87ff87f76y89398y839y83</h4>
+            <p>Once your payment is confirmed your account will be funded Instanly</p>
+        </div>
+    </div>
+    <script>
+            // document.getElementById('button').addEventListener('click', function() {
+            //     document.querySelector('bg-modal').style.display = 'flex';
+            // });
+    </script>
+</body>
+
+
+
+<script src="js/script.js"></script>
+<script src="js/requests.js"></script>
+<!-- <script src="js/session.js"></script> -->
+
+</html>
