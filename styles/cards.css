@@ -1,0 +1,28 @@
+@import url(./svg.css);
+
+.stats-card {
+    width     : 100%;
+    padding   : 20px;
+    display   : block;
+    text-align: center;
+}
+
+.stats-card-child {
+    display         : inline-block;
+    padding         : 10px;
+    width           : 45%;
+    margin          : 10px;
+    background-color: #fff;
+    box-shadow      : 0px 0px 5px 0.5px #ccc;
+    border-radius   : 20px;
+    margin          : 10px;
+}
+
+.stats-card-child:first-child {
+    display   : block;
+    text-align: center;
+}
+
+.labelText {
+    display: block;
+}
