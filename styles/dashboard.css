@@ -123,7 +123,7 @@ body {
 .sidebar-profile {
     display       : flex;
     flex-direction: row;
-    margin-top    : 100px;
+    margin-top    : 15px;
     padding       : 10px;
 }
 
@@ -151,11 +151,12 @@ body {
 }
 
 .main {
-    width     : 100%;
+    width     : calc(80% - 20px);
     height    : 100vh;
-    margin-top: 100px;
+    margin-top: 70px;
     margin-left: 20%;
 }
+
 
 .main-header {
     display        : flex;
@@ -186,23 +187,23 @@ body {
 
 .main-card_container {
     display        : flex;
+    flex-direction: row;
     width          : 100%;
-    height         : auto;
     flex-direction : row;
-    flex-wrap      : wrap;
     justify-content: center;
+    padding: 15px 10px;
+    overflow-x: auto;
 }
 
 .main-card_container .main-card {
     width        : 350px;
     display      : inline-block;
-    height       : 170px;
     background   : linear-gradient(45deg, #880fc4 0%, #1d39f2 100%);
     color        : white;
     font-size    : 22px;
     margin       : 10px;
-    border-radius: 10px;
-    padding      : 25px;
+    border-radius: 20px;
+    padding      : 15px;
 }
 
 .main-card .main-card_content {
@@ -244,6 +245,10 @@ body {
     display   : block;
     padding   : 10px;
     margin-top: 15px;
+}
+
+.live-cryptodata-container{
+    margin-top: 100px;
 }
 
 @media screen and (max-width:578px) {

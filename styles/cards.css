@@ -2,27 +2,34 @@
 
 .stats-card {
     width     : 100%;
-    padding   : 20px;
-    display   : block;
+    display   : flex;
+    flex-direction: row;
     text-align: center;
+    background: linear-gradient(90deg, #880fc4, #1d39f2);
+    padding: 20px;
 }
 
 .stats-card-child {
     display         : inline-block;
-    padding         : 10px;
-    width           : 45%;
-    margin          : 10px;
+    padding         : 30px;
+    width           : fit-content;
+    margin          : 100px 10px -125px 10px;
     background-color: #fff;
     box-shadow      : 0px 0px 5px 0.5px #ccc;
     border-radius   : 20px;
-    margin          : 10px;
 }
 
 .stats-card-child:first-child {
-    display   : block;
+    display   : flex;
     text-align: center;
 }
 
+.block-stats{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
 .labelText {
-    display: block;
+    font-size: small;
 }
