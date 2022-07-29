@@ -9,7 +9,6 @@ function LoginRequest(email, password) {
     return response.json()
   })
   .then((data) => {
-    console.log(data.status);
     if(data.state == false || data.err == 404){
       showAlert('alert-danger', data.message);
     }else{
