@@ -39,12 +39,12 @@
                 </div>
             </div>
             <div class="sidebar-links-container">
-                <a href="#" class="sidebar-links"><i class="fa fa-layer-group"></i> Dashboard</a>
+                <a href="dashboard.html" class="sidebar-links"><i class="fa fa-layer-group"></i> Dashboard</a>
                 <a href="#" class="sidebar-links"><i class="fa fa-user"></i> My Profile</a>
                 <a href="#" class="sidebar-links"><i class="fa fa-wallet"></i> Wallet Deposit</a>
                 <a href="#" class="sidebar-links"><i class="fa fa-paper-plane"></i> Transfer Fund</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-download"></i> Withdrawal</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-users"></i> Refferals</a>
+                <a href="#" class="sidebar-links" id="button"><i class="fa fa-download"></i> Withdrawal</a>
+                <a href="referrals.html" class="sidebar-links"><i class="fa fa-users"></i> Refferals</a>
                 <a href="#" class="sidebar-links"><i class="fa fa-headset"></i> Contact Support</a>
                 <a onclick="Logout()" class="sidebar-links"><i class="fa fa-arrow-right-from-bracket"></i> Logout</a>
             </div>
@@ -56,12 +56,14 @@
         <div class="sideNav" id="sidenav">
             <span class="closeBtn" id="close"><i class="fas fa-times"></i></span>
             <div class="sidebar-links-container">
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Deposits</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Withdrawal</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i>Transaction History</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
-                <a onclick="Logout()" class="sidebar-links"><i class="fa fa-money"></i> Logout</a>
+                <a href="dashboard.html" class="sidebar-links"><i class="fa fa-layer-group"></i> Dashboard</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-user"></i> My Profile</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-wallet"></i> Wallet Deposit</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-paper-plane"></i> Transfer Fund</a>
+                <a href="#" class="sidebar-links" id="mbutton"><i class="fa fa-download"></i> Withdrawal</a>
+                <a href="referrals.html" class="sidebar-links"><i class="fa fa-users"></i> Refferals</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-headset"></i> Contact Support</a>
+                <a onclick="Logout()" class="sidebar-links"><i class="fa fa-arrow-right-from-bracket"></i> Logout</a>
             </div>
         </div>
 
@@ -157,6 +159,40 @@
             </div>
         </div>
     </div>
+    </div>
+
+
+
+
+    <div class="bg-modal">
+        <div class="modal-content">
+            <div class="closebtn">+</div>
+            <h1>Wallet Withdrawal</h1>
+            <h3>Available Balance</h3>
+                    <h1 id="wallet-balance">$100.00</h1>
+            <hr>
+            <div>
+                <h2>Enter amount and select payment type below</h2>
+                <div class="input-field">
+                    <i class="fa fa-dollar"></i>
+                    <input type="text" name="" id="" placeholder="Enter Amount to Withdraw">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-wallet"></i>
+                    <input type="text" name="" id="" placeholder="Enter Wallet Address">
+                </div>
+
+                <select name="" id="">
+                    <option value="">Select Payment Type</option>
+                    <option value="">Bitcoin</option>
+                    <option value="">USDT</option>
+                    <option value="">Paypal</option>
+                </select>
+            </div>
+            <button class="button">Withdraw</button>
+            <p>Your withdrawal will processed within 15mins</p>
+        </div>
     </div>
 
 </body>
