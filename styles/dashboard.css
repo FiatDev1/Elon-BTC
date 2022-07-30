@@ -152,18 +152,13 @@ body {
 }
 
 .main {
-<<<<<<< HEAD
-    width      : 80%;
-    height     : 100vh;
-    margin-top : 100px;
-=======
     width     : calc(80% - 20px);
     height    : 100vh;
     margin-top: 70px;
->>>>>>> d92bd6ab426441c5609e09e7d91532df43a32f60
     margin-left: 20%;
     /* margin: 0 1rem; */
-    /* padding: 50px; */
+    padding: 0 0;
+    /* text-align: center; */
     /* display: block; */
 }
 
@@ -208,18 +203,20 @@ body {
     font-size    : 22px;
     margin       : 10px;
     border-radius: 20px;
-    padding      : 15px;
+    padding      : 25px 10px;
 }
 
 .main-card .main-card_content {
     display       : flex;
     flex-direction: row;
-    padding       : 15px 0;
+    justify-content: space-evenly;
+    align-items: center;
+    /* padding       : 15px 0; */
 }
 
 .main-card_content {
     color      : #fff;
-    align-items: center;
+    align-items: center !important;
     /* display : block; */
 }
 
@@ -229,8 +226,14 @@ body {
 }
 
 .card-price {
-    text-align: center;
-    display   : block;
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* line-height: 50px; */
+    gap: 20x;
+    /* text-align: center; */
+    /* display   : block; */
 }
 
 .card-price .balance {
@@ -239,9 +242,7 @@ body {
 }
 
 .card-txt {
-    font-size : 18px;
-    text-align: right;
-    display   : block;
+/* font-size: 16px; */
 }
 
 .card-icon i {
@@ -252,7 +253,11 @@ body {
     margin-top: 15px;
 }
 
-<<<<<<< HEAD
+.live-cryptodata-container{
+    margin-top: 100px;
+}
+
+
 
 .bg-modal {
     width           : 100%;
@@ -359,13 +364,19 @@ select {
 }
 
 
-/* =========Mobile responsive design====== */
-=======
-.live-cryptodata-container{
-    margin-top: 100px;
-}
 
->>>>>>> d92bd6ab426441c5609e09e7d91532df43a32f60
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:578px) {
     .sidebar {
         display: none;

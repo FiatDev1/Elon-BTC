@@ -1,0 +1,42 @@
+/* body {
+    background: rgb(140, 214, 30);
+} */
+
+.profile-tab{
+    margin: auto;
+}
+
+[data-tab-info] {
+    display: none;
+}
+
+.active[data-tab-info] {
+    display: block;
+}
+
+.tab-content {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(82, 75, 75);
+}
+
+.tabs {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    margin: 0;
+}
+
+.tabs span {
+    background: #ddd;
+    color: black;
+    padding: 10px;
+    /* border: 1px solid rgb(255, 255, 255); */
+}
+
+.tabs span:hover {
+    /* background: rgb(29, 185, 112); */
+    cursor: pointer;
+    color: black;
+}

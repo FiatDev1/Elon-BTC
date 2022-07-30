@@ -33,3 +33,23 @@
 .labelText {
     font-size: small;
 }
+
+
+
+
+.deposit-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+    height: 280px;
+    /* border: 1px solid black; */
+    border-radius: 12px;
+    box-shadow      : 0px 0px 5px 1px #ccc;
+    line-height: 50px;
+    margin: 14px;
+}
+
+

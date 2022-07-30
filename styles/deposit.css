@@ -1,73 +1,47 @@
-.main {
-    width      : 100%;
-    height     : auto;
-    margin-top : 200px;
-    margin-left: 60px;
-}
-
-.main .main-container h1 {
+.deposit-card-header{
     margin-bottom: 20px;
 }
 
-.option-menu select {
-    padding      : 14px 18px;
-    width        : 350px;
-    font-size    : 20px;
-    cursor       : pointer;
-    border-radius: 30px;
+.deposit-card-header h1 {
+    font-size: 24px;
 }
 
-.option:hover {
+
+.deposit-card img{
+    width: 80px;
+    height: 80px;
+}
+
+
+.deposit-btn{
+    border: none;
+    color: white;
+    padding: 12px;
+    color: white;
+    background-color: #1d39f2;
+    border-radius: 4px;
+    font-size: 18px;
     cursor: pointer;
+    outline: none;
 }
 
-.bg-modal {
-    width           : 100%;
-    height          : 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    position        : absolute;
-    top             : 0;
-    display         : flex;
-    justify-content : center;
-    align-items     : center;
-    display         : none;
-}
-
-.modal-content {
-    width           : 500px;
-    height          : 300px;
-    background-color: white;
-    opacity         : 1;
-    text-align      : center;
-    padding         : 20px;
-    position        : relative;
-}
-
-.close {
-    position : absolute;
-    top      : 0;
-    right    : 14px;
-    font-size: 42px;
-    transform: rotate(45deg);
-    cursor   : pointer;
-    display  : hidden;
+.deposit-card-menu{
+    display: flex;
+    /* flex-direction: column; */
+    /* padding: 20px 30px; */
+    /* justify-content: space-between; */
 }
 
 
-.card{
-        display: block;
-        padding: 15px;
-        text-decoration: none;
-        color: #fff;
-        cursor: pointer;
-        font-size: small;
-        transition: 0.3s ease 1;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
+.deposit-card-container {
+    display         : inline-block;
+    padding         : 30px;
+    width           : fit-content;
+    margin          : 100px 10px -125px 10px;
+    background-color: #fff;
+    border-radius   : 20px;
 }
 
-
-.card img {
-    width: 200px;
-    height: 200px;
+.deposit {
+    /* text-align: center; */
 }

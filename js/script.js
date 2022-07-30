@@ -57,13 +57,13 @@ document.querySelector('.closebtn').addEventListener('click', function() {
   document.querySelector('.bg-modal').style.display = 'none';
 });
 
-document.getElementById('mbutton').addEventListener('click', function() {
-  document.querySelector('.bg-modal').style.display = 'flex';
-});
+// document.getElementById('mbutton').addEventListener('click', function() {
+//   document.querySelector('.bg-modal').style.display = 'flex';
+// });
 
-document.querySelector('.mclosebtn').addEventListener('click', function() {
-document.querySelector('.bg-modal').style.display = 'none';
-});
+// document.querySelector('.mclosebtn').addEventListener('click', function() {
+// document.querySelector('.bg-modal').style.display = 'none';
+// });
 
 
   $(document).ready(function(){
