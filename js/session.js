@@ -3,5 +3,5 @@ if(sessionStorage.getItem("state") == null || sessionStorage.getItem("state") ==
     Logout();
 }else{
     // do nothing, session is valid
-    console.log(sessionStorage);
+    // console.log(sessionStorage);
 }
