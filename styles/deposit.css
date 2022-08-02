@@ -1,5 +1,8 @@
+@import url('./withdrawal.css');
+
 .deposit-card-header{
     margin-bottom: 20px;
+    text-align: start;
 }
 
 .deposit-card-header h1 {
@@ -27,21 +30,32 @@
 
 .deposit-card-menu{
     display: flex;
-    /* flex-direction: column; */
-    /* padding: 20px 30px; */
-    /* justify-content: space-between; */
+    justify-content: center !important;
+    align-items: center !important;
 }
-
 
 .deposit-card-container {
-    display         : inline-block;
-    padding         : 30px;
-    width           : fit-content;
-    margin          : 100px 10px -125px 10px;
+    display         : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding         : 10px;
     background-color: #fff;
-    border-radius   : 20px;
+    border-radius   : 20px;   margin: 20px;
 }
 
-.deposit {
-    /* text-align: center; */
+
+@media screen and (max-width:586px) {
+    .deposit-card-menu{
+        display: block;
+    }
+
+    .deposit-card-container{
+    }
+
+    .deposit-card{
+        width: 200px;
+        height: auto;
+        margin: 0;
+    }
 }

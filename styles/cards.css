@@ -4,16 +4,21 @@
     width     : 100%;
     display   : flex;
     flex-direction: row;
+    /* justify-content: flex-start; */
     text-align: center;
-    background: linear-gradient(90deg, #880fc4, #1d39f2);
-    padding: 20px;
+    /* background: linear-gradient(90deg, #880fc4, #1d39f2); */
+    /* padding: 20px; */
+margin: 0 50px;
+
+    /* justify-content: center; */
+    /* padding        : 15px 10px; */
 }
 
 .stats-card-child {
     display         : inline-block;
     padding         : 30px;
     width           : fit-content;
-    margin          : 100px 10px -125px 10px;
+    /* margin          : 100px 10px -125px 10px; */
     background-color: #fff;
     box-shadow      : 0px 0px 5px 0.5px #ccc;
     border-radius   : 20px;
@@ -52,4 +57,16 @@
     margin: 14px;
 }
 
+
+@media screen and (max-width:586px){
+    .stats-card{
+        display: block;
+    }
+
+    .deposit-card{
+        width: 300px;
+        /* height: a; */
+        /* margin: 6px; */
+    }
+}
 
