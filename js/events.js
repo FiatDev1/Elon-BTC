@@ -40,7 +40,7 @@ function SignUp() {
       if (psw.value != confirmpassword.value) {
         showAlert('alert-danger', "The passwords you provided do not match!");
       } else {
-        SignupRequest(fullname.value, email.value, psw.value)
+        SignupRequest(fullname.value, email.value, psw.value, window.location.search)
       }
     } else {
       alert.innerHTML = "<i class='fa fa-info-circle'></i> Password must not be less than 8 characters"

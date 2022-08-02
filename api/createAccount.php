@@ -52,4 +52,3 @@ if ($_REQUEST) {
         echo "Invalid Request!";
     }
 }
-?>

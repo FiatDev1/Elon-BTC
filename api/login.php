@@ -54,4 +54,3 @@
     } else {
         echo "Invalid Request!";
     }
-?>

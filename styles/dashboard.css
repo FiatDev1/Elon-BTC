@@ -1,5 +1,10 @@
 @import url('./main.css');
+
 /* @import url('./all.css'); */
+html {
+    scroll-behavior: smooth;
+    transition     : 0.3s ease;
+}
 
 * {
     padding    : 0;
@@ -12,6 +17,8 @@ body {
     overflow-y      : auto;
     overflow-x      : hidden;
     background-color: #f2f6f9;
+    scroll-behavior : smooth;
+    transition      : 0.3s ease;
 }
 
 .nav {
@@ -68,8 +75,9 @@ body {
 .logoTxt {
     color      : #fff;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size  : 24px;
+    margin-left: 10px;
 }
 
 .hamburger {
@@ -84,41 +92,42 @@ body {
     flex-direction: row;
 }
 
-.main-menu{
-margin-top: -28px;
+.main-menu {
+    margin-top: -50px;
+    text-align: center;
 }
 
-.dashboard-title{
-    display: flex;
+.dashboard-title {
+    display        : flex;
     justify-content: space-between;
-        background: linear-gradient(90deg, #880fc4, #1d39f2);
-        color: #fff;
-    padding: 70px;
+    background     : linear-gradient(90deg, #880fc4, #1d39f2);
+    color          : #fff;
+    padding        : 85px 70px;
 }
 
-.dashboard-title .top-title{
-    font-size: 30px;
+.dashboard-title .top-title {
+    font-size  : 30px;
     font-weight: 600;
 }
 
-.top-btn1{
-    width: 120px;
+.top-btn1 {
+    width           : 120px;
     background-color: transparent;
-    padding: 8px 14px;
-    color: white;
-    border: 2px solid #fff;
-    border-radius: 30px;
-    cursor: pointer;
+    padding         : 8px 14px;
+    color           : white;
+    border          : 2px solid #fff;
+    border-radius   : 30px;
+    cursor          : pointer;
 }
 
-.top-btn2{
-    width: 120px;
+.top-btn2 {
+    width           : 120px;
     background-color: #de9f21;
-    padding: 8px 14px;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
+    padding         : 8px 14px;
+    color           : white;
+    border          : none;
+    border-radius   : 30px;
+    cursor          : pointer;
 }
 
 .sidebar {
@@ -191,14 +200,14 @@ margin-top: -28px;
 
 .main {
     /* position: relative; */
-    width        : calc(100% - 20%);
-    height       : 100vh;
-    margin-top   : 70px;
-    margin-left  : 20%;
-    /* margin    : 0 1rem; */
+    width           : calc(100% - 20%);
+    height          : 100vh;
+    margin-top      : 70px;
+    margin-left     : 20%;
+    /* margin       : 0 1rem; */
     /* padding      : 0; */
-    /* text-align: center; */
-    /* display   : block; */
+    /* text-align   : center; */
+    /* display      : block; */
 }
 
 
@@ -265,18 +274,12 @@ margin-top: -28px;
     color    : #dddbdb;
 }
 
-.live-cryptodata-container {
-    margin-top: 100px;
-}
-
-
-
 /* ======withdrawal Modal pop up============ */
 
 .bg-modal {
     width           : 100%;
     height          : 100%;
-    /* background-color: rgba(0, 0, 0, 0.7); */
+    background-color: rgba(0, 0, 0, 0.7);
     position        : fixed;
     top             : 0;
     display         : flex;
@@ -286,8 +289,8 @@ margin-top: -28px;
     text-align      : center;
 }
 
-.bg-modal::backdrop{
-    background-color: #1d39f2;
+.bg-modal::backdrop {
+    /* background-color: #1d39f2; */
 }
 
 .modal-content i {
@@ -360,14 +363,14 @@ select {
 }
 
 .modal-content button {
-    outline         : none;
-    border          : none;
-    cursor          : pointer;
-    color           : white;
-    background-color: #880fc4;
-    font-weight     : ;
-    padding         : 14px 22px;
-    border-radius   : 30px;
+    outline            : none;
+    border             : none;
+    cursor             : pointer;
+    color              : white;
+    background-color   : #880fc4;
+    /* font-weight     : ; */
+    padding            : 14px 22px;
+    border-radius      : 30px;
 }
 
 .closebtn {
@@ -404,28 +407,28 @@ select {
     }
 
     .main {
-        width: 100%;
+        width   : 100%;
         overflow: hidden;
-        height: auto;
-        margin: 0;
-        padding: 50px 0;
+        height  : auto;
+        margin  : 0;
+        padding : 50px 0;
     }
 
-    .top-btn{
-        display: flex;
+    .top-btn {
+        display       : flex;
         flex-direction: column;
-        gap: 10px;
+        gap           : 10px;
     }
 
-    .dashboard-title{
+    .dashboard-title {
         /* display: inline-block; */
-        padding: 50px 15px;
-        /* width: 100%; */
+        padding       : 50px 15px;
+        /* width      : 100%; */
         /* margin-left: -20%; */
-        
+
     }
 
-    .main-card_container{
+    .main-card_container {
         display: block;
     }
 
