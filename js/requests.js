@@ -18,8 +18,8 @@ function LoginRequest(email, password) {
   });
 }
 
-function SignupRequest(fullname, email, password) {
-  fetch("./api/createAccount.php?fullname=" + fullname + "&email=" + email + "&password=" + password, {
+function SignupRequest(fullname, email, password, referral = null) {
+  fetch("./api/createAccount.php" + referral == null || referral == "" ? "?fullname" : referral + "&fullname=" + fullname + "&email=" + email + "&password=" + password, {
     method: 'GET',
     mode: 'no-cors',
     cache: 'no-cache',

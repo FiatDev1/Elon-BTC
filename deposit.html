@@ -8,7 +8,7 @@
     <title>Dashboard | Deposit</title>
     <link rel="stylesheet" href="styles/dashboard.css">
     <link rel="stylesheet" href="styles/deposit.css">
-    <link rel="stylesheet" href="styles/change-password.css">
+    <link rel="stylesheet" href="styles/cards.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="shortcut icon" href="./images/bitcoin-btc-logo.svg" type="image/x-icon">
 
@@ -22,66 +22,283 @@
         </div>
         <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
     </div>
+
+
+    <!-- ==========Top Navigation======= -->
+    <div class="nav">
+        <div class="logo">
+            <img src="images/bitcoin-btc-logo.svg" alt="">
+            <span class="logoTxt">ElonBTC</span>
+        </div>
+        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+    </div>
+
+    <!-- ==========Dashboard Container======= -->
+
     <div class="dashboard">
+
+        <!-- ==========Pc Sidebar======= -->
+
         <div class="sidebar">
+            <div class="sidebar-profile">
+                <div><img src="images/avatar.png" class="sidebar-profile-pix" alt=""></div>
+                <div class="sidebar-user-info">
+                    <span class="sidebar-username">Fiatmoney</span>
+                    <span class="sidebar-email">user@mail.com</span>
+                </div>
+            </div>
             <div class="sidebar-links-container">
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Dashboard</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Deposits</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Withdrawal</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Transaction History</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
-                <a href="#"class="sidebar-links"><i class="fa fa-money"></i> Settings</a>
-                <a onclick="Logout()" class="sidebar-links"><i class="fa fa-money"></i> Logout</a>
+                <a href="dashboard" class="sidebar-links"><i class="fa fa-layer-group"></i> Dashboard</a>
+                <a href="profile" class="sidebar-links"><i class="fa fa-user"></i> My Profile</a>
+                <a href="deposit" class="sidebar-links"><i class="fa fa-wallet"></i> Wallet Deposit</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-paper-plane"></i> Transfer Fund</a>
+                <a href="withdrawal" class="sidebar-links"><i class="fa fa-download"></i> Withdrawal</a>
+                <a href="referrals" class="sidebar-links"><i class="fa fa-users"></i> Refferals</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-headset"></i> Contact Support</a>
+                <a onclick="Logout()" class="sidebar-links"><i class="fa fa-arrow-right-from-bracket"></i> Logout</a>
             </div>
         </div>
+
+
+        <!-- ==========Mobile Sidebar======= -->
 
         <div class="sideNav" id="sidenav">
             <span class="closeBtn" id="close"><i class="fas fa-times"></i></span>
             <div class="sidebar-links-container">
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Deposits</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Withdrawal</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i>Transaction History</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-money"></i> Income</a>
-                <a onclick="Logout()" class="sidebar-links"><i class="fa fa-money"></i> Logout</a>
+                <a href="dashboard" class="sidebar-links"><i class="fa fa-layer-group"></i> Dashboard</a>
+                <a href="profile" class="sidebar-links"><i class="fa fa-user"></i> My Profile</a>
+                <a href="deposit" class="sidebar-links"><i class="fa fa-wallet"></i> Wallet Deposit</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-paper-plane"></i> Transfer Fund</a>
+                <a href="withdrawal " class="sidebar-links"><i class="fa fa-download"></i> Withdrawal</a>
+                <a href="referrals" class="sidebar-links"><i class="fa fa-users"></i> Refferals</a>
+                <a href="#" class="sidebar-links"><i class="fa fa-headset"></i> Contact Support</a>
+                <a onclick="Logout()" class="sidebar-links"><i class="fa fa-arrow-right-from-bracket"></i> Logout</a>
             </div>
         </div>
 
+        <!-- ==========main content======= -->
 
         <div class="main">
-            <div class="main-container">
-                <h1>Deposit</h1>
-                <div>
-                    <input type="text" name="" id="" placeholder="Enter Wallet Address" required>
 
-                <input type="text"  name="" id="" placeholder="Amount to deposit" required>
-
-                <textarea name="" id="" cols="30" rows="10" placeholder="Description"></textarea>
-
-                <button>Pay Now</button>
+            <div class="dashboard-title">
+                <div class="top-title">
+                    Deposit
+                </div>
+                <div class="top-btn">
+                    <button class="top-btn1">Investment</button>
+                    <button class="top-btn2" id="button">Withdrawal</button>
                 </div>
             </div>
 
 
+            <div class="main-menu">
+                <div class="stats-card">
+
+                    <div class="stats-card-child">
+                        <div class="block-stats">
+                            <div class="svgChart">
+                                <svg viewBox="0 0 36 36" class="circular-chart green">
+                                    <path class="circle-bg" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <text x="18" y="20.35" class="percentage">60%</text>
+                                </svg>
+                            </div>
+                            <span class="labelText">Investment</span>
+                        </div>
+
+                        <div class="block-stats">
+                            <div class="svgChart">
+                                <svg viewBox="0 0 36 36" class="circular-chart blue">
+                                    <path class="circle-bg" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <text x="18" y="20.35" class="percentage">60%</text>
+                                </svg>
+                            </div>
+                            <span class="labelText">Deposits</span>
+                        </div>
+
+                        <div class="block-stats">
+                            <div class="svgChart">
+                                <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                    <path class="circle-bg" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <text x="18" y="20.35" class="percentage">60%</text>
+                                </svg>
+                            </div>
+                            <span class="labelText">Refferals</span>
+                        </div>
+                    </div>
+
+                    <div class="stats-card-child">
+
+                    </div>
+                </div>
+
+                <div class="live-cryptodata-container" id="cryptodata-container"></div>
+
+                <!-- <div class="main-header">
+    </div> -->
+
+                <!-- ==========Dashboard Cards======= -->
+                <div class="main-card_container">
+                    <div class="main-card">
+                        <div class="main-card_content">
+                            <div class="card-price">
+                                <span class="balance">$100</span>
+                                <p class="card-txt">Wallet</p>
+                            </div>
+                            <div class="card-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-card">
+                        <div class="main-card_content">
+                            <div class="card-price">
+                                <span class="balance">$500</span>
+                                <p class="card-txt">Earnings</p>
+                            </div>
+                            <div class="card-icon">
+                                <i class="fas fa-hand-holding-dollar"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-card">
+                        <div class="main-card_content">
+                            <div class="card-price">
+                                <span class="balance">$700</span>
+                                <p class="card-txt">Referral Bonus</p>
+                            </div>
+                            <div class="card-icon">
+                                <i class="fas fa-arrows-down-to-people"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="deposit-card-container">
+                    <div class="deposit-card-header">
+                        <h1>Deposit into your Wallet</h1>
+                    </div>
+                    <hr>
+                    <div class="deposit-card-menu">
+                        <div class="deposit-card">
+                            <img src="images/opengraph.png" alt="">
+                            <h4>Pay using Bitcoin (Blockchain gateway)</h4>
+                            <button class="deposit-btn">Pay with Blockchain</button>
+                        </div>
+
+                        <div class="deposit-card">
+                            <img src="images/Tether.png" alt="">
+                            <h4>Pay using USDT</h4>
+                            <button class="deposit-btn">Pay with USDT</button>
+                        </div>
+                    </div>
+                </div>
 
 
 
+                <div class="withdrawal-container">
+                    <div class="withdrawal-content">
+                        <div class="withdrawal-header">
+                            Deposit History
+                        </div><br>
+                        <hr>
 
+                        <table class="styled-table">
+                            <thead>
+                                <th>Package</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            </thead>
+
+                        <tbody>
+                            <tr class="active-row">
+                                <td>Basic</td>
+                                <td>$50</td>
+                                <td>Pending</td>
+                                <td>2022-07-12 11:07am</td>
+                            </tr>
+
+                            <tr class="">
+                                <td>Basic</td>
+                                <td>$50</td>
+                                <td>Pending</td>
+                                <td>2022-07-12 11:07am</td>
+                            </tr>
+
+                            <tr class="">
+                                <td>Basic</td>
+                                <td>$50</td>
+                                <td>Pending</td>
+                                <td>2022-07-12 11:07am</td>
+                            </tr>
+
+                            <tr class="">
+                                <td>Basic</td>
+                                <td>$50</td>
+                                <td>Pending</td>
+                                <td>2022-07-12 11:07am</td>
+                            </tr>
+                        </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+
+
+
+
+
+
     <div class="bg-modal">
         <div class="modal-content">
-            <div class="close">+</div>
-            <h1>Transfer Your Bitcoin to the address Below</h1>
-            <h4>YUGVYUF7FY687g8f87f87ff87f76y89398y839y83</h4>
-            <p>Once your payment is confirmed your account will be funded Instanly</p>
+            <div class="closebtn">+</div>
+            <h1>Wallet Withdrawal</h1>
+            <h3>Available Balance</h3>
+            <h1 id="wallet-balance">$100.00</h1>
+            <hr>
+            <div>
+                <h2>Enter amount and select payment type below</h2>
+                <div class="input-field">
+                    <i class="fa fa-dollar"></i>
+                    <input type="text" name="" id="" placeholder="Enter Amount to Withdraw">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-wallet"></i>
+                    <input type="text" name="" id="" placeholder="Enter Wallet Address">
+                </div>
+
+                <select name="" id="">
+                    <option value="">Select Payment Type</option>
+                    <option value="">Bitcoin</option>
+                    <option value="">USDT</option>
+                    <option value="">Paypal</option>
+                </select>
+            </div>
+            <button class="button">Withdraw</button>
+            <p>Your withdrawal will processed within 15mins</p>
         </div>
     </div>
-    <script>
-            // document.getElementById('button').addEventListener('click', function() {
-            //     document.querySelector('bg-modal').style.display = 'flex';
-            // });
-    </script>
 </body>
 
 

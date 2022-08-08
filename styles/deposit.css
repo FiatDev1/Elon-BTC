@@ -1,73 +1,61 @@
-.main {
-    width      : 100%;
-    height     : auto;
-    margin-top : 200px;
-    margin-left: 60px;
-}
+@import url('./withdrawal.css');
 
-.main .main-container h1 {
+.deposit-card-header{
     margin-bottom: 20px;
+    text-align: start;
 }
 
-.option-menu select {
-    padding      : 14px 18px;
-    width        : 350px;
-    font-size    : 20px;
-    cursor       : pointer;
-    border-radius: 30px;
+.deposit-card-header h1 {
+    font-size: 24px;
 }
 
-.option:hover {
+
+.deposit-card img{
+    width: 80px;
+    height: 80px;
+}
+
+
+.deposit-btn{
+    border: none;
+    color: white;
+    padding: 12px;
+    color: white;
+    background-color: #1d39f2;
+    border-radius: 4px;
+    font-size: 18px;
     cursor: pointer;
+    outline: none;
 }
 
-.bg-modal {
-    width           : 100%;
-    height          : 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    position        : absolute;
-    top             : 0;
+.deposit-card-menu{
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.deposit-card-container {
     display         : flex;
-    justify-content : center;
-    align-items     : center;
-    display         : none;
-}
-
-.modal-content {
-    width           : 500px;
-    height          : 300px;
-    background-color: white;
-    opacity         : 1;
-    text-align      : center;
-    padding         : 20px;
-    position        : relative;
-}
-
-.close {
-    position : absolute;
-    top      : 0;
-    right    : 14px;
-    font-size: 42px;
-    transform: rotate(45deg);
-    cursor   : pointer;
-    display  : hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding         : 10px;
+    background-color: #fff;
+    border-radius   : 20px;   margin: 20px;
 }
 
 
-.card{
+@media screen and (max-width:586px) {
+    .deposit-card-menu{
         display: block;
-        padding: 15px;
-        text-decoration: none;
-        color: #fff;
-        cursor: pointer;
-        font-size: small;
-        transition: 0.3s ease 1;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-}
+    }
 
+    .deposit-card-container{
+    }
 
-.card img {
-    width: 200px;
-    height: 200px;
+    .deposit-card{
+        width: 200px;
+        height: auto;
+        margin: 0;
+    }
 }

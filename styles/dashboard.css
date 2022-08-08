@@ -1,5 +1,11 @@
 @import url('./main.css');
 
+/* @import url('./all.css'); */
+html {
+    scroll-behavior: smooth;
+    transition     : 0.3s ease;
+}
+
 * {
     padding    : 0;
     margin     : 0;
@@ -8,8 +14,11 @@
 }
 
 body {
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow-y      : auto;
+    overflow-x      : hidden;
+    background-color: #f2f6f9;
+    scroll-behavior : smooth;
+    transition      : 0.3s ease;
 }
 
 .nav {
@@ -66,8 +75,9 @@ body {
 .logoTxt {
     color      : #fff;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size  : 24px;
+    margin-left: 10px;
 }
 
 .hamburger {
@@ -77,10 +87,47 @@ body {
 }
 
 .dashboard {
+    width         : 100%;
     display       : flex;
     flex-direction: row;
-    width         : 100%;
-    font-family   : sans-serif;
+}
+
+.main-menu {
+    margin-top: -50px;
+    text-align: center;
+}
+
+.dashboard-title {
+    display        : flex;
+    justify-content: space-between;
+    background     : linear-gradient(90deg, #880fc4, #1d39f2);
+    color          : #fff;
+    padding        : 85px 70px;
+}
+
+.dashboard-title .top-title {
+    font-size  : 30px;
+    font-weight: 600;
+}
+
+.top-btn1 {
+    width           : 120px;
+    background-color: transparent;
+    padding         : 8px 14px;
+    color           : white;
+    border          : 2px solid #fff;
+    border-radius   : 30px;
+    cursor          : pointer;
+}
+
+.top-btn2 {
+    width           : 120px;
+    background-color: #de9f21;
+    padding         : 8px 14px;
+    color           : white;
+    border          : none;
+    border-radius   : 30px;
+    cursor          : pointer;
 }
 
 .sidebar {
@@ -92,6 +139,7 @@ body {
     color           : #fff;
     height          : 100vh;
     margin-top      : 70px;
+
 }
 
 .sidebar-links-container {
@@ -151,10 +199,15 @@ body {
 }
 
 .main {
-    width     : calc(80% - 20px);
-    height    : 100vh;
-    margin-top: 70px;
-    margin-left: 20%;
+    /* position: relative; */
+    width           : calc(100% - 20%);
+    height          : 100vh;
+    margin-top      : 70px;
+    margin-left     : 20%;
+    /* margin       : 0 1rem; */
+    /* padding      : 0; */
+    /* text-align   : center; */
+    /* display      : block; */
 }
 
 
@@ -167,17 +220,6 @@ body {
     color          : #fff;
 }
 
-
-
-.main .main-header .user_id {
-    display           : flex;
-    /* justify-content: ; */
-}
-
-.main-header h4 {
-    font-size: 24px;
-}
-
 .sidebar-buttons {
     padding: 20px;
     cursor : pointer;
@@ -187,12 +229,11 @@ body {
 
 .main-card_container {
     display        : flex;
-    flex-direction: row;
+    flex-direction : row;
     width          : 100%;
     flex-direction : row;
     justify-content: center;
-    padding: 15px 10px;
-    overflow-x: auto;
+    padding        : 15px 10px;
 }
 
 .main-card_container .main-card {
@@ -203,53 +244,157 @@ body {
     font-size    : 22px;
     margin       : 10px;
     border-radius: 20px;
-    padding      : 15px;
+    padding      : 25px 0;
 }
 
 .main-card .main-card_content {
-    display       : flex;
-    flex-direction: row;
-    padding       : 15px 0;
-}
-
-.main-card_content {
-    color      : #fff;
-    align-items: center;
-    /* display : block; */
-}
-
-.main-card_content h3 {
-    font-size: 45px;
-    padding  : 10px;
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-evenly;
+    align-items    : center;
+    padding        : 10px 0;
 }
 
 .card-price {
-    text-align: center;
-    display   : block;
+    line-height: 50px;
 }
 
 .card-price .balance {
-    font-size  : 42px;
-    font-weight: bold;
+    font-size  : 46px;
+    font-weight: bolder;
 }
 
 .card-txt {
-    font-size : 18px;
-    text-align: right;
-    display   : block;
+    font-size: 20px;
+    color    : #dddbdb;
 }
 
 .card-icon i {
-    font-size : 60px;
-    text-align: right;
-    display   : block;
-    padding   : 10px;
-    margin-top: 15px;
+    font-size: 80px;
+    color    : #dddbdb;
 }
 
-.live-cryptodata-container{
-    margin-top: 100px;
+/* ======withdrawal Modal pop up============ */
+
+.bg-modal {
+    width           : 100%;
+    height          : 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position        : fixed;
+    top             : 0;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    display         : none;
+    text-align      : center;
 }
+
+.bg-modal::backdrop {
+    /* background-color: #1d39f2; */
+}
+
+.modal-content i {
+    font-size: 24px;
+}
+
+.modal-content {
+    width           : 380px;
+    height          : auto;
+    background-color: white;
+    border-radius   : 24px;
+    opacity         : 1;
+    text-align      : center !important;
+    padding         : 40px;
+    position        : relative;
+    line-height     : 40px;
+}
+
+.modal-content h1 {
+    font-size: 28px;
+}
+
+#wallet-balance {
+    /* font-weight: bold; */
+    font-size    : 35px;
+    margin-bottom: 10px;
+}
+
+.modal-content h3 {
+    font-size: 18px;
+    color    : red;
+}
+
+.modal-content .input-field {
+    /* width                : 400px; */
+    height               : 55px;
+    background-color     : #f0f0f0;
+    margin               : 10px 0;
+    border-radius        : 55px;
+    display              : grid;
+    grid-template-columns: 15% 85%;
+    padding              : 0 0.4rem;
+    position             : relative;
+    align-items          : center;
+}
+
+.modal-content .input-field input {
+    outline    : none;
+    border     : none;
+    background : none;
+    font-size  : 20px;
+    font-weight: bold;
+}
+
+.modal-content .input-field input:placeholder-shown {
+    color      : #aaa;
+    font-weight: 500;
+}
+
+select {
+    outline         : none;
+    border          : none;
+    cursor          : pointer;
+    width           : 220px;
+    font-size       : 18px;
+    background-color: #f0f0f0;
+    padding         : 10px;
+    border-radius   : 12px;
+    margin-bottom   : 10px;
+}
+
+.modal-content button {
+    outline            : none;
+    border             : none;
+    cursor             : pointer;
+    color              : white;
+    background-color   : #880fc4;
+    /* font-weight     : ; */
+    padding            : 14px 22px;
+    border-radius      : 30px;
+}
+
+.closebtn {
+    position : absolute;
+    top      : 0;
+    right    : 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor   : pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width:578px) {
     .sidebar {
@@ -262,12 +407,31 @@ body {
     }
 
     .main {
-        height: auto;
+        width   : 100%;
+        overflow: hidden;
+        height  : auto;
+        margin  : 0;
+        padding : 50px 0;
     }
 
-    .main .main-card_container {
-        margin-top: 150px;
+    .top-btn {
+        display       : flex;
+        flex-direction: column;
+        gap           : 10px;
     }
+
+    .dashboard-title {
+        /* display: inline-block; */
+        padding       : 50px 15px;
+        /* width      : 100%; */
+        /* margin-left: -20%; */
+
+    }
+
+    .main-card_container {
+        display: block;
+    }
+
 
     .main .main-header .hamburger {
         display: block;

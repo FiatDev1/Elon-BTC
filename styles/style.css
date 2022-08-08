@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Reset Style */
 * {
   padding   : 0;
   margin    : 0;
@@ -8,8 +9,10 @@
 
 body {
   /* background : linear-gradient(45deg, #56127a, #4a15dd); */
-  background    : linear-gradient(90deg, #880fc4 0%, #1d39f2 100%);
-  font-family   : "roboto", sans-serif;
+  background     : linear-gradient(90deg, #880fc4 0%, #1d39f2 100%);
+  font-family    : "roboto", sans-serif;
+  scroll-behavior: smooth;
+  transition     : 0.3s ease;
 }
 
 /* .my_bttn {
@@ -36,22 +39,23 @@ main {
 }
 
 .button {
-  padding         : 8px 15px;
-  background      : transparent;
-  color           : #de9f21;
-  cursor          : pointer;
-  outline         : none;
-  border: 2px solid #de9f21;
+  padding      : 8px 15px;
+  background   : transparent;
+  color        : #de9f21;
+  cursor       : pointer;
+  outline      : none;
+  border       : 2px solid #de9f21;
   border-radius: 20px;
-  transition: 0.3s ease all;
-  margin-left: 10px;
+  transition   : 0.3s ease all;
+  margin-left  : 10px;
 }
 
-.button:hover{
+.button:hover {
   background-color: #de9f21;
-  color: #fff;
-  transition: 0.3s ease all;
+  color           : #fff;
+  transition      : 0.3s ease all;
 }
+
 .logo-img {
   width : 50px;
   height: 50px;
@@ -99,7 +103,7 @@ nav .logo img {
 }
 
 nav ul {
-  display: block;
+  display   : block;
   list-style: none;
 }
 
@@ -114,12 +118,12 @@ nav ul li a {
   cursor         : pointer;
   position       : relative;
   padding        : 10px 0px;
-  outline: none;
+  outline        : none;
 }
 
-nav .button{
+nav .button {
   text-decoration: none;
-  color: white;
+  color          : white;
 }
 
 nav ul li a:hover {
@@ -144,7 +148,8 @@ nav ul li a:hover:before {
   transform       : scaleX(1);
   transform-origin: left;
 }
-.loginBtn{
+
+.loginBtn {
   color: #de9f21;
 }
 
@@ -235,34 +240,35 @@ nav ul li a:hover:before {
 }
 
 .plan-menu {
-  display: flex;
+  display        : flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items    : center;
+  flex-wrap      : wrap;
 }
 
 .plan-card {
-  color              : white;
-background-color: rgba(255, 255, 255, 0.225);  ;
-  width              : 300px;
-  border             : none;
-  border-radius      : 14px;
-  display            : flex;
-  justify-content    : center;
-  align-items        : center;
-  margin             : 6px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  color           : white;
+  background-color: rgba(255, 255, 255, 0.225);
+  ;
+  width          : 300px;
+  border         : none;
+  border-radius  : 14px;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  margin         : 6px;
+  padding-top    : 25px;
+  padding-bottom : 25px;
+  /* box-shadow  : rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  box-shadow     : rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
-.plan-card:hover{
-transform: scale(1.09);
-transition: ease-in-out .2s;
+.plan-card:hover {
+  transform : scale(1.09);
+  transition: ease-in-out .2s;
 }
 
-.active{
+.active {
   /* transform: scale(1.1); */
 }
 
@@ -277,17 +283,17 @@ transition: ease-in-out .2s;
 }
 
 
-.plan-content{
+.plan-content {
   margin: 25px 0 30px 0;
 }
 
 .plan-menu .plan-card .plan-body .plan-content li {
   list-style-type: none;
-  font-size : 18px;
-  display: flex;
+  font-size      : 18px;
+  display        : flex;
   justify-content: center;
-  width: 100%;
-  padding: 0.3rem 0;
+  width          : 100%;
+  padding        : 0.3rem 0;
 }
 
 
@@ -666,18 +672,16 @@ footer p {
   align-items    : center;
 }
 
-.input-field {
-
-}
+.input-field {}
 
 input {
-  height: 45px;
-  background : none;
-  outline    : none;
-  border     : none;
-  font-weight: 500;
-  font-size  : 1.2rem;
-  color      : #333;
+  height          : 45px;
+  background      : none;
+  outline         : none;
+  border          : none;
+  font-weight     : 500;
+  font-size       : 1.2rem;
+  color           : #333;
   background-color: #f0f0f0;
   padding         : 0 12px 0 12px;
   border-radius   : 18px;
@@ -735,8 +739,8 @@ input {
     display: block;
   }
 
-  .plan-menu{
-    display: flex;
+  .plan-menu {
+    display       : flex;
     flex-direction: column;
   }
 
@@ -784,14 +788,14 @@ input {
 }
 
 
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) {
   /* .plan-menu{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
 
   } */
-} 
+}
 
 
 @media screen and (max-width: 992px) {
@@ -821,10 +825,10 @@ input {
     font-size: 36px;
   }
 
-.plan-card{
+  .plan-card {
     margin-bottom: 1rem;
-    margin-right: 1rem;
-}
+    margin-right : 1rem;
+  }
 
   .faq-container {
     padding: 10px;
