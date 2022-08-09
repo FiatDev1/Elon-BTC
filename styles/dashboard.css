@@ -135,7 +135,7 @@ body {
     position        : fixed;
     top             : 0;
     left            : 0;
-    background-color: #252525;
+    background-color: #070707;
     color           : #fff;
     height          : 100vh;
     margin-top      : 70px;
@@ -155,8 +155,8 @@ body {
     cursor                    : pointer;
     /* font-size              : small; */
     transition                : 0.3s ease 1;
-    border-top-right-radius   : 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius   : 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .sidebar-links i {
@@ -164,7 +164,7 @@ body {
 }
 
 .sidebar-links:hover {
-    background: #111;
+    background: #121212;
     transition: 0.3s ease 1;
 }
 
