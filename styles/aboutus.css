@@ -144,11 +144,12 @@
   }
 
   .tech-container{
-    width              : 100%;
-    display            : flex;
+    /* width              : 100%; */
+    /* display            : flex;
     align-items        : center;
     justify-content    : center;
-    padding            : 100px 0;
+    padding            : 100px 0; */
+    margin-bottom: 60px;
   }
 
   
@@ -156,15 +157,53 @@
   .tech-title {
     text-align   : center;
     color        : #ffffff;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     align-items  : center;
     padding      : 0 30px 0 30px;
   }
 
-  .tech-title .tech-desc{
+  .tech-content img{
+    width: 400px;
+    height: 400px;
+  }
+
+  .tech-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 0 40px;
+    /* margin: 10px; */
+  }
+
+ .tech-desc p{
     font-size: 20px;
-    /* padding: 40px; */
-    /* width: 1000px; */
+    padding: 40px;
+    width: 800px;
+  }
+
+  .affilations-container{
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .affilations-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .affliation-card{
+    display            : inline-block;
+    padding            : 30px;
+    width              : fit-content;
+    background-color   : #fff;
+    box-shadow         : 0px 0px 5px 0.5px #ccc;
+    border-radius      : 20px;
+    text-align         : center;
+    margin: 8px;
   }
 
 
