@@ -1,4 +1,5 @@
 @import url('./main.css');
+@import url('./deposit.css');
 
 /* @import url('./all.css'); */
 html {
@@ -93,7 +94,7 @@ body {
 }
 
 .main-menu {
-    margin-top: -50px;
+    margin-top   : -50px;
     /* text-align: center; */
 }
 
