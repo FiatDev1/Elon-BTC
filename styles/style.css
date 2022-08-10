@@ -2,10 +2,12 @@
 
 /* Reset Style */
 * {
-  padding   : 0;
-  margin    : 0;
-  box-sizing: border-box;
+  padding    : 0;
+  margin     : 0;
+  box-sizing : border-box;
+  /* overflow: hidden; */
 }
+
 
 body {
   /* background : linear-gradient(45deg, #56127a, #4a15dd); */
@@ -15,7 +17,9 @@ body {
   transition     : 0.3s ease;
 }
 
-/* .my_bttn {
+
+/* bottom to top arrow */
+.arrow-up-btn {
   height          : 45px;
   width           : 45px;
   background-color: white;
@@ -27,17 +31,25 @@ body {
   border-radius   : 5px;
   cursor          : pointer;
   outline         : none;
-} */
+}
 
-/* .my_bttn:hover {
+.arrow-up-btn:hover {
   transform: scale(1.05) translateY(-5px);
-} */
+}
 
+
+/* all content inside main */
 main {
-  margin-top: 80px;
+  margin-top: 70px;
   /* border : 2px solid #d9aac7; */
 }
 
+.live-coinPrices {
+  overflow: hidden;
+}
+
+
+/* button style */
 .button {
   padding      : 8px 15px;
   background   : transparent;
@@ -56,12 +68,13 @@ main {
   transition      : 0.3s ease all;
 }
 
+/* Navigation */
 .logo-img {
   width : 50px;
   height: 50px;
 }
 
-
+/* Mobile hamburger */
 .hamburger {
   color    : white;
   font-size: 25px;
@@ -69,6 +82,7 @@ main {
   display  : none;
 }
 
+/* styling for bgcolor onscroll */
 .active_nav {
   background-color: #6a03a1;
 }
@@ -153,6 +167,8 @@ nav ul li a:hover:before {
   color: #de9f21;
 }
 
+
+/* style for mobile navigation */
 .sideNav {
   height          : 100%;
   width           : 250px;
@@ -208,8 +224,7 @@ nav ul li a:hover:before {
   align-items          : center;
   padding-left         : 4%;
   padding-right        : 4%;
-  margin-bottom        : 50px;
-
+  margin-bottom        : 40px;
 }
 
 .start_up .img-sec img {
@@ -231,9 +246,8 @@ nav ul li a:hover:before {
   width     : 80%;
 }
 
-/* ============== */
 
-
+/* plan menu */
 .plan-container {
   display        : flex;
   justify-content: center;
@@ -268,9 +282,6 @@ nav ul li a:hover:before {
   transition: ease-in-out .2s;
 }
 
-.active {
-  /* transform: scale(1.1); */
-}
 
 .plan-menu .plan-card .plan-body {
   text-align: center;
@@ -504,7 +515,7 @@ svg {
   color        : rgb(214, 214, 214);
   padding      : 20px 30px;
   border-radius: 15px;
-  box-shadow   : 10px 20px 25px rgba(0, 0, 0, 0.2);
+  /* box-shadow   : 10px 20px 25px rgba(0, 0, 0, 0.2); */
 }
 
 .swiper .swiper-slide_content img {
@@ -535,7 +546,7 @@ svg {
 
 .swiper .swiper-slide_content figcaption {
   font-size  : 28px;
-  font-weight: 700
+  font-weight: 700;
 }
 
 .swiper .swiper-slide_content:hover {
@@ -562,6 +573,42 @@ svg {
 }
 
 /* =========end of testimonial style========= */
+
+
+
+/* ==counters=== */
+.counters {
+  padding         : 50px 0;
+  /* background-color: #fff; */
+  /* color           : #0d6fdd; */
+  color: white;
+}
+
+.common-box {
+  /* width         : calc(100% / 4 - 4px); */
+  /* display       : inline-block; */
+  /* vertical-align: top; */
+  text-align    : center;
+  margin: 50px;
+}
+
+.counter-num {
+  font-size  : 40px;
+  line-height: normal;
+  font-weight: 900;
+}
+
+.counter-text {
+  font-size  : 20px;
+  line-height: normal;
+}
+
+#inview-example{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 
 
 
@@ -724,7 +771,7 @@ input {
   }
 
   main {
-    margin-top: 120px;
+    margin-top: 80px;
   }
 
   .start_up {
