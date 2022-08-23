@@ -6,12 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login!</title>
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
         rel="stylesheet" />
-
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/alerts.css">
     <link rel="shortcut icon" href="./images/bitcoin-btc-logo.svg" type="image/x-icon">
@@ -79,7 +76,7 @@
                             <div class="alert" id="alert"></div>
                             <div class="input-field">
                                 <i class="fa fa-envelope"></i>
-                                <input type="email" placeholder="Email" id="email" required>
+                                <input type="email" placeholder="Email" id="email" autocomplete="on" required>
                             </div>
                             <div class="input-field">
                                 <i class="fa fa-lock"></i>
@@ -89,11 +86,9 @@
 
                         <button type="submit" class="btn" onclick="Login()">Login</button>
                     </div>
-                    <span class=""><a href="forgotPassword.html">Forgot Password?</a></span>
-                    <div class="other-links"><p>Don't have account?<a href="register.html">Create</a></p></div>
+                    <a class="fpass" href="forgotPassword.html">Forgot Password?</a>
+                    <div class="other-links"><p>Don't have an account?<a href="register.html">Create</a></p></div>
                 </div>
-
-
             </div>
         </div>
 

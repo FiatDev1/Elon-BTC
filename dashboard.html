@@ -8,14 +8,19 @@
     <title>Dashboard</title>
 
     <link rel="stylesheet" href="styles/dashboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <link rel="stylesheet" href="styles/cards.css">
-    <link rel="stylesheet" href="styles/profile.css">
-    <link rel="stylesheet" href="styles/referrals.css">
+    <link rel="stylesheet" href="styles/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="styles/dataTables.jqueryui.min.css">
+    <link rel="stylesheet" href="styles/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="styles/jquery.modal.min.css">
+    <!-- <link rel="stylesheet" href="./styles/fontawesome/css/all.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" /> -->
+    <!-- <link rel="stylesheet" href="styles/cards.css"> -->
+    <!-- <link rel="stylesheet" href="styles/profile.css"> -->
+    <!-- <link rel="stylesheet" href="styles/referrals.css"> -->
     <link rel="shortcut icon" href="./images/bitcoin-btc-logo.svg" type="image/x-icon">
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <!-- <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script> -->
 
 </head>
 
@@ -50,7 +55,7 @@
                 <a href="#deposit" class="sidebar-links"><i class="fa fa-wallet"></i> Wallet Deposit</a>
                 <a href="#withdrawal" class="sidebar-links"><i class="fa fa-download"></i> Withdrawal</a>
                 <a href="#referrals" class="sidebar-links"><i class="fa fa-users"></i> Refferals</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-headset"></i> Contact Support</a>
+                <a href="contact-us" class="sidebar-links"><i class="fa fa-headset"></i> Contact Support</a>
                 <a onclick="Logout()" class="sidebar-links"><i class="fa fa-arrow-right-from-bracket"></i> Logout</a>
             </div>
         </div>
@@ -66,7 +71,7 @@
                 <a href="#deposit" class="sidebar-links"><i class="fa fa-wallet"></i> Wallet Deposit</a>
                 <a href="#withdrawal" class="sidebar-links"><i class="fa fa-download"></i> Withdrawal</a>
                 <a href="#referrals" class="sidebar-links"><i class="fa fa-users"></i> Refferals</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-headset"></i> Contact Support</a>
+                <a href="contact-us" class="sidebar-links"><i class="fa fa-headset"></i> Contact Support</a>
                 <a onclick="Logout()" class="sidebar-links"><i class="fa fa-arrow-right-from-bracket"></i> Logout</a>
             </div>
         </div>
@@ -79,8 +84,8 @@
                     Dashboard
                 </div>
                 <div class="top-btn">
-                    <button class="top-btn1">Investment</button>
-                    <button class="top-btn2" id="button">Withdrawal</button>
+                    <a href="#" class="top-btn1">Investments</a>
+                    <a href="#ex1" rel="modal:open" class="top-btn2">Withdrawal</a>
                 </div>
             </div>
 
@@ -201,45 +206,11 @@
 
 
 
-
-            <div class="bg-modal">
-                <div class="modal-content">
-                    <div class="closebtn">+</div>
-                    <h1>Wallet Withdrawal</h1>
-                    <h3>Available Balance</h3>
-                    <h1 id="wallet-balance">$100.00</h1>
-                    <hr>
-                    <div>
-                        <h2>Enter amount and select payment type below</h2>
-                        <div class="input-field">
-                            <i class="fa fa-dollar"></i>
-                            <input type="text" name="" id="" placeholder="Enter Amount to Withdraw">
-                        </div>
-
-                        <div class="input-field">
-                            <i class="fa fa-wallet"></i>
-                            <input type="text" name="" id="" placeholder="Enter Wallet Address">
-                        </div>
-
-                        <select name="" id="">
-                            <option value="">Select Payment Type</option>
-                            <option value="">Bitcoin</option>
-                            <option value="">USDT</option>
-                            <option value="">Paypal</option>
-                        </select>
-                    </div>
-                    <button class="button">Withdraw</button>
-                    <p>Your withdrawal will processed within 15mins</p>
-                </div>
-            </div>
-
             <!-- deposit section -->
-
             <div class="deposit-card-container" id="deposit">
                 <div class="deposit-card-header">
-                    <h1>Deposit into your Wallet</h1>
+                    Deposit into your Wallet
                 </div>
-                <hr>
                 <div class="deposit-card-menu">
                     <div class="deposit-card">
                         <img src="images/opengraph.png" alt="">
@@ -258,14 +229,13 @@
             <!-- deposit history section -->
 
 
-            <div class="withdrawal-container">
-                <div class="withdrawal-content">
-                    <div class="withdrawal-header">
+            <div class="table-container">
+                <div class="table-content">
+                    <div class="table-header">
                         Deposit History
                     </div><br>
-                    <hr>
 
-                    <table class="styled-table">
+                    <table id="example1" class="display styled-table">
                         <thead>
                             <th>Package</th>
                             <th>Amount</th>
@@ -275,6 +245,7 @@
 
                         <tbody>
                             <tr class="active-row">
+                                <td>11002093</td>
                                 <td>Basic</td>
                                 <td>$50</td>
                                 <td>Pending</td>
@@ -282,6 +253,7 @@
                             </tr>
 
                             <tr class="">
+                                <td>11002093</td>
                                 <td>Basic</td>
                                 <td>$50</td>
                                 <td>Pending</td>
@@ -289,6 +261,7 @@
                             </tr>
 
                             <tr class="">
+                                <td>11002093</td>
                                 <td>Basic</td>
                                 <td>$50</td>
                                 <td>Pending</td>
@@ -296,6 +269,7 @@
                             </tr>
 
                             <tr class="">
+                                <td>11002093</td>
                                 <td>Basic</td>
                                 <td>$50</td>
                                 <td>Pending</td>
@@ -309,15 +283,15 @@
 
             <!-- withdrawal history section -->
 
-            <div class="withdrawal-container" id="withdrawal">
-                <div class="withdrawal-content">
-                    <div class="withdrawal-header">
+            <div class="table-container" id="withdrawal">
+                <div class="table-content">
+                    <div class="table-header">
                         Withdrawal History
                     </div><br>
-                    <hr>
 
-                    <table class="styled-table">
+                    <table id="example2" class="display styled-table">
                         <thead>
+                            <th>Reference No</th>
                             <th>Package</th>
                             <th>Amount</th>
                             <th>Status</th>
@@ -326,6 +300,7 @@
 
                         <tbody>
                             <tr class="active-row">
+                                <td>11002093</td>
                                 <td>Basic</td>
                                 <td>$50</td>
                                 <td>Pending</td>
@@ -333,6 +308,7 @@
                             </tr>
 
                             <tr class="">
+                                <td>11002093</td>
                                 <td>Basic</td>
                                 <td>$50</td>
                                 <td>Pending</td>
@@ -340,6 +316,7 @@
                             </tr>
 
                             <tr class="">
+                                <td>11002093</td>
                                 <td>Basic</td>
                                 <td>$50</td>
                                 <td>Pending</td>
@@ -347,6 +324,7 @@
                             </tr>
 
                             <tr class="">
+                                <td>11002093</td>
                                 <td>Basic</td>
                                 <td>$50</td>
                                 <td>Pending</td>
@@ -360,14 +338,13 @@
 
             <!-- referrals section -->
 
-            <div class="withdrawal-container" id="referrals">
-                <div class="withdrawal-content">
-                    <div class="withdrawal-header">
+            <div class="table-container" id="referrals">
+                <div class="table-content">
+                    <div class="table-header">
                         My Referrals
                     </div><br>
-                    <hr>
 
-                    <table class="styled-table">
+                    <table id="example3" class="display styled-table">
                         <thead>
                             <th>Avatar</th>
                             <th>Name</th>
@@ -505,15 +482,55 @@
 
         <!-- referrals section -->
 
+    </div>
 
 
+    <div id="ex1" class="modal bg-modal">
+        <div class="modal-content">
+            <h1>Wallet Withdrawal</h1>
+            <h3>Available Balance</h3>
+            <h1 id="wallet-balance">$100.00</h1>
+            <hr>
+            <div>
+                <h2>Enter amount and select payment type below</h2>
+                <div class="input-field">
+                    <i class="fa fa-dollar"></i>
+                    <input type="text" name="" id="" placeholder="Enter Amount to Withdraw">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa fa-wallet"></i>
+                    <input type="text" name="" id="" placeholder="Enter Wallet Address">
+                </div>
+
+                <select name="" id="">
+                    <option value="">Select Payment Type</option>
+                    <option value="">Bitcoin</option>
+                    <option value="">USDT</option>
+                    <option value="">Paypal</option>
+                </select>
+            </div>
+            <button class="button">Withdraw</button>
+            <!-- <p>Your withdrawal will processed within 15mins</p> -->
+        </div>
     </div>
 </body>
 
+
 <script src="js/script.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/dataTables.jqueryui.min.js"></script>
+<script src="js/responsive.dataTables.min.js"></script>
+<script src="js/jquery.modal.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#example1,#example2,#example3,#example4').DataTable();
+    })
+</script>
 <script src="js/requests.js"></script>
 <script src="js/Crypto.js"></script>
 <script src="js/main.js"></script>
-<!-- <script src="js/session.js"></script> -->
+<script src="js/session.js"></script>
 
 </html>

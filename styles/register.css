@@ -1,16 +1,5 @@
-* {
-    padding: 0;
-    margin : 0;
-}
-
-body,
-input {
-    font-family: 'Poppins', sans-serif;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
-
-
+@import url('./style.css');
 .login {
     display        : flex;
     justify-content: center;
@@ -22,11 +11,9 @@ input {
     text-align         : center !important;
     height             : 500px;
     width              : 500px;
-    /* border          : 5px solid black; */
-    margin-top         : 10%;
+    margin-top         : 5%;
     align-items        : center;
     justify-content    : center !important;
-
 }
 
 form {
@@ -77,7 +64,6 @@ form {
 }
 
 .btn {
-    /* width           : 150px; */
     padding: 15px;
     outline         : none;
     cursor          : pointer;

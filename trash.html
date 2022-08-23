@@ -8,84 +8,79 @@
 </head>
 
 <style>
-	@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
-
-* {
-  box-sizing: border-box;
+	.modal {
+    position        : fixed;
+    left            : 0;
+    top             : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity         : 0;
+    visibility      : hidden;
+    transform       : scale(1.1);
+    transition      : visibility 0s linear 0.25s, opacity 0.25s 0s, transform0.25s;
 }
 
-body {
-  background-color: #8e44ad;
-  color: #fff;
-  font-family: "Roboto Mono", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
+.modal-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
 }
 
-.counter-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin: 30px 50px;
+.close-button{
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
 }
 
-.counter {
-  font-size: 60px;
-  margin-top: 10px;
+.close-button:hover {
+    background-color: darkgray;
 }
 
-@media (max-width: 580px) {
-  body {
-    flex-direction: column;
-  }
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
-
 </style>
 <body>
-	<div class="counter-container">
-		<i class="fab fa-twitter fa-3x"></i>
-		<div class="counter" data-target="12000"></div>
-		<span>Twitter Followers</span>
-	</div>
-	<div class="counter-container">
-		<i class="fab fa-youtube fa-3x"></i>
-		<div class="counter" data-target="5000"></div>
-		<span>Youtube Subscribers</span>
-	</div>
-	<div class="counter-container">
-		<i class="fab fa-facebook fa-3x"></i>
-		<div class="counter" data-target="7500"></div>
-		<span>Facebook Fans</span>
-	</div>
+  <div class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h1>Hello. I am a modal</h1>
+    </div>
+</div>
+	
 </body>
 
 <script>
-	const counters = document.querySelectorAll(".counter");
+	 const modal = document.querySelector(".modal");
+    const trigger = document.querySelector('#trigger');
+    const closeButton = document.querySelector('.close-button');
 
-counters.forEach((counter) => {
-  counter.innerText = "0";
-
-  const updateCounter = () => {
-    const target = +counter.getAttribute("data-target");
-    const c = +counter.innerText;
-
-    const increment = target / 200;
-
-    if (c < target) {
-      counter.innerText = `${Math.ceil(c + increment)}`;
-      setTimeout(updateCounter, 1);
-    } else {
-      counter.innerText = target;
+    function toggleModal() {
+        modal.classList.toggle("show-modal");
     }
-  };
 
-  updateCounter();
-});
+    function windowOnClick(event) {
+        if (event.target === modal) {
+            toggleModal();
+        }
+    }
+
+    trigger.addEventListener("click", toggleModal);
+    closeButton.addEventListener("click", toggleModal);
+    window.addEventListener("click", windowOnClick);
 
 </script>
 </html>

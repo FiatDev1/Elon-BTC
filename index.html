@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elon Btc</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
-        rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="styles/fontawesome/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" /> -->
     <link rel="shortcut icon" href="./images/bitcoin-btc-logo.svg" type="image/x-icon">
     <!-- <link rel="shortcut icon" href="./images/bitcoin-btc-logo.svg" type="image/x-icon"> -->
     <link rel="stylesheet" href="./swiper-assests/swiper-bundle.min.css">
@@ -17,11 +16,18 @@
 
 </head>
 
-<body>
+<body class="loading">
+
+    <div class="preloader">
+    </div>
+
+    <!-- ========scrollTop button============ -->
     <button class="arrow-up-btn">
         <i class="fas fa-arrow-up" aria-hidden="false"></i>
     </button>
 
+
+    <!-- ==========Desktop Navigation==== -->
     <nav>
         <div class="logo">
             <img src="images/bitcoin-btc-logo.svg" alt="logo">
@@ -32,9 +38,8 @@
         <div class="navLinks">
             <ul>
                 <li><a href="index.html"> Home </a></li>
-                <!-- <li><a href=""> Services </a></li> -->
-                <li><a href="about-us.html"> About Us </a></li>
                 <li><a href="#faq"> Faq </a></li>
+                <li><a href="about-us.html"> About Us </a></li>
                 <li><a href="contact-us.html"> Contact Us</a></li>
                 <a href="login.html" class="button">Login</a>
             </ul>
@@ -42,6 +47,7 @@
     </nav>
 
 
+    <!-- ===========mobile Navigation============= -->
     <div class="sideNav" id="sidenav">
         <a class="closeBtn" id="close"><i class="fas fa-times"></i></a>
         <a href="index.html">Home</a>
@@ -50,10 +56,12 @@
         <a href="">Faq</a>
         <a href="contact-us.html">Contact</a>
 
-        <a href="login"><button class="button">Login</button></a>
+        <a href="login.html"><button class="button">Login</button></a>
 
     </div>
 
+
+    <!-- ============circle animation========== -->
     <ul class="circles">
         <li></li>
         <li></li>
@@ -68,19 +76,23 @@
     </ul>
 
 
+    <!-- ==========content container=========== -->
 
     <main>
+        <!-- ===========live coinPrices data===========  -->
         <div class="live-coinPrices">
             <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script>
             <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#ffffff" lcw-marquee-1="coins"
                 lcw-marquee-2="movers" lcw-marquee-items="10"></div>
         </div>
+
+        <!-- =============Get started======= -->
         <div class="start_up">
             <div class="" data-aos="slide-right" data-aos-delay="100" data-aos-duration="1500">
                 <h1>Smart Bitcoin <br>Investment</h1>
                 <p>Our company has consistently embraced creative innovative to provide a superior level of financial
                     excellence for our investors.</p>
-                <button class="button ">Get Started</button>
+                <a href="login.html"><button class="button">Get Started</button></a>
             </div>
             <div class="img-sec" data-aos="slide-left" data-aos-delay="100" data-aos-duration="1500">
                 <img src="images/cryptocurrency.png" alt="" height="">
@@ -89,6 +101,7 @@
 
 
 
+        <!-- ========Package menu========== -->
         <div class="plan-container">
             <div class="plan-menu">
                 <div class="plan-card">
@@ -101,7 +114,7 @@
                             <li>Roi - 180%</li>
                             <li>Duration - 4Days</li>
                         </div>
-                        <button class="button">Invest Now</button>
+                        <a href="login.html"><button class="button">Invest Now</button></a>
                     </div>
                 </div>
 
@@ -117,7 +130,7 @@
                             <li>Roi - 200%</li>
                             <li>Duration - 4Days</li>
                         </div>
-                        <button class="button">Invest Now</button>
+                        <a href="login.html"><button class="button">Invest Now</button></a>
                     </div>
                 </div>
 
@@ -131,7 +144,7 @@
                             <li>Roi - 200%</li>
                             <li>Duration - 4Days</li>
                         </div>
-                        <button class="button">Invest Now</button>
+                        <a href="login.html"><button class="button">Invest Now</button></a>
                     </div>
                 </div>
             </div>
@@ -139,7 +152,8 @@
 
 
 
-        <div class="faq-container">
+        <!-- ============Faq======== -->
+        <div class="faq-container" id="faq">
 
             <h2 class="faq-title">FAQs</h2>
 
@@ -255,13 +269,14 @@
                             Zhao. The program enables an investor to invest as low as $50 and get a large percentage
                             interest. Each investment is mined and traded so as to enable the large chain of crypto
                             distribution. </p><br>
-                        <button class="button">Learn More</button>
-
+                        <a href="about-us.html">
+                            <button class="button">Learn More</button>
+                        </a>
                         <div class="social-links-menu">
                             <ul class="social-links">
-                                <li><a href=""><i class="fab fa-facebook"
+                                <!-- <li><a href=""><i class="fab fa-facebook"
                                             style="color: #0000ff; background-color: #ffffff; border-radius: 50%; border: none;"></i></a>
-                                </li>
+                                </li> -->
                                 <li><a href=""><i class="fab fa-twitter" style="color: #1db0ff;"></i></a></li>
                                 <li><a href=""><i class="fab fa-telegram"
                                             style="color: #0086ce; background: #ffffff; border-radius: 50%;"></i></a>
@@ -274,12 +289,7 @@
         </div>
 
 
-        <!-- ==============END OF ABOUT US================ -->
-
-
-
         <!-- ===========Testimonial Menu============= -->
-
         <div class="swiper-menu">
             <div class="swiper-title">
                 <h1>Our Happy Client Reviews</h1>
@@ -330,43 +340,46 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-        <!-- ==============END OF TESTIMONIAL MENU=============== -->
+
+
+        <!-- ==============Counter Menu=============== -->
         <div class="counter-container">
-                <div id="inview-example" class="counters">
-                    <div class="common-box">
-                        <div class="counter-num">
-                            <span class="timer" data-count="3">3</span>
-                            <span>+</span>
-                        </div>
-                        <div class="counter-text">Exsistence</div>
+            <div id="inview-example" class="counters">
+                <div class="common-box">
+                    <div class="counter-num">
+                        <span class="timer" data-count="3">3</span>
+                        <span>+</span>
                     </div>
-                    <div class="common-box">
-                        <div class="counter-num">
-                            <span class="timer" data-count="2200">2200</span>
-                            <span>+</span>
-                        </div>
-                        <div class="counter-text">Registered Users</div>
-                    </div>
-                    <div class="common-box">
-                        <div class="counter-num">
-                            <span>$</span>
-                            <span class="timer" data-count="1000000">1000000</span>
-                        </div>
-                        <div class="counter-text">Total Payout</div>
-                    </div>
-                    <div class="common-box">
-                        <div class="counter-num">
-                            <span>$</span>
-                            <span class="timer" data-count="1900000">1900000</span>
-                        </div>
-                        <div class="counter-text">Earnings</div>
-                    </div>
+                    <div class="counter-text">Exsistence</div>
                 </div>
-                <!-- <div style="height: 1000px;"></div> -->
+                <div class="common-box">
+                    <div class="counter-num">
+                        <span class="timer" data-count="2200">2200</span>
+                        <span>+</span>
+                    </div>
+                    <div class="counter-text">Registered Users</div>
+                </div>
+                <div class="common-box">
+                    <div class="counter-num">
+                        <span>$</span>
+                        <span class="timer" data-count="1000000">1000000</span>
+                    </div>
+                    <div class="counter-text">Total Payout</div>
+                </div>
+                <div class="common-box">
+                    <div class="counter-num">
+                        <span>$</span>
+                        <span class="timer" data-count="1900000">1900000</span>
+                    </div>
+                    <div class="counter-text">Earnings</div>
+                </div>
+            </div>
         </div>
 
     </main>
 
+
+    <!-- ============footer========= -->
     <footer>
         <div class="footer-container">
             <div class="sec flogo">
@@ -398,13 +411,14 @@
 </body>
 
 
+<!-- ===========All plugins========== -->
+<script src="/js/script.js"></script>
 <script src="swiper-assests/swiper-bundle.min.js"></script>
 <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 <!-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
-<script src="js/jquery.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
 <script src="js/inview.min.js"></script>
-<script src="/js/script.js"></script>
 
 <script type="text/javascript">
     function inviewExample() {
@@ -432,6 +446,36 @@
     }
     $(window).on('load', function () {
         inviewExample();
+    });
+
+
+
+    // ============scroll-up button===========
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                $('.arrow-up-btn').fadeIn(250);
+            }
+            else {
+                $('.arrow-up-btn').fadeOut(250);
+            }
+        });
+        $('.arrow-up-btn').click(function () {
+            $('html,body').animate(
+                { scrollTop: 0 }, 400
+            );
+        });
+    });
+
+    function preloaderFadeOutInit() {
+        $('.preloader').delay(2000).fadeOut('slow');
+        $('body').removeClass('loading');
+    }
+
+    jQuery(window).on('load', function () {
+        (function ($) {
+            preloaderFadeOutInit();
+        })(jQuery);
     });
 </script>
 
