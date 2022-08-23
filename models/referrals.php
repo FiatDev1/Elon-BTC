@@ -6,8 +6,9 @@
         public $token;
         public $created;
 
-        private $table_name = "refferals";
+        private $table_name = "referrals";
         private $conn;
+        
         function __construct($db)
         {
             $this->conn = $db;
@@ -23,10 +24,10 @@
             $this->created = date("d-m-y H:I:Sa");
 
             $query = "INSERT INTO " . $this->table_name . "
-            SET referral_id = :referral_id,
-                referred_id = :referred_id,
-                token = :token,
-                created = :crated";
+                SET referral_id = :referral_id,
+                    referred_id = :referred_id,
+                    token = :token,
+                    created = :created";
             
             $this->referral_id = htmlspecialchars(strip_tags($this->referral_id));
             $this->referred_id = htmlspecialchars(strip_tags($this->referred_id));

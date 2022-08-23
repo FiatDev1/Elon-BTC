@@ -18,8 +18,16 @@ function LoginRequest(email, password) {
   });
 }
 
-function SignupRequest(fullname, email, password, referral = null) {
-  fetch("./api/createAccount.php" + referral == null || referral == "" ? "?fullname" : referral + "&fullname=" + fullname + "&email=" + email + "&password=" + password, {
+function SignupRequest(fullname, email, password) {
+  let referral;
+
+  if(sessionStorage.getItem("referral_email") != null || sessionStorage.getItem("referral_email") != undefined || sessionStorage.getItem("referral_email") != ""){
+    referral = "?referral=" + sessionStorage.getItem("referral_email") + "&";
+  }else{
+    referral = "?"
+  }
+
+  fetch("./api/createAccount.php" + referral + "fullname=" + fullname + "&email=" + email + "&password=" + password, {
     method: 'GET',
     mode: 'no-cors',
     cache: 'no-cache',
@@ -33,6 +41,8 @@ function SignupRequest(fullname, email, password, referral = null) {
       showAlert('alert-danger', res.message);
     }else{
       showAlert('alert-safe', res.message + " You'll be redirected.");
+      sessionStorage.clear();
+      
       setTimeout(()=>{
         redirect('./verify');
       }, 3000);

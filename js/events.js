@@ -1,6 +1,6 @@
 function Login() {
-  let email = document.getElementById('email').value
-  let password = document.getElementById('password').value
+  let email = document.getElementById('email').value;
+  let password = document.getElementById('password').value;
 
   LoginRequest(email, password);
 }
@@ -40,7 +40,7 @@ function SignUp() {
       if (psw.value != confirmpassword.value) {
         showAlert('alert-danger', "The passwords you provided do not match!");
       } else {
-        SignupRequest(fullname.value, email.value, psw.value, window.location.search)
+        SignupRequest(fullname.value, email.value, psw.value)
       }
     } else {
       alert.innerHTML = "<i class='fa fa-info-circle'></i> Password must not be less than 8 characters"
@@ -58,3 +58,4 @@ function ValidateEmail(){
 function disableButton(button){
   button.disabled = true;
 }
+

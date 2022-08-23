@@ -21,7 +21,7 @@ class User
     function show_error($e)
     {
         echo "<pre>";
-        print_r($e);
+            print_r($e);
         echo "</pre>";
     }
 
