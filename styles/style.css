@@ -41,6 +41,10 @@ body {
   transition     : 0.3s ease;
 }
 
+a{
+  text-decoration: none;
+}
+
 /* loader style */
 
 /* .loading {
@@ -306,7 +310,6 @@ nav ul li a:hover:before {
 .plan-card {
   color           : white;
   background-color: rgba(255, 255, 255, 0.225);
-  ;
   width          : 300px;
   border         : none;
   border-radius  : 14px;

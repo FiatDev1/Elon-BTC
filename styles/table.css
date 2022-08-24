@@ -28,6 +28,7 @@
 
 .styled-table thead tr {
     background-color: #4a0071;
+    width: 100%;
     color           : #fff;
     text-align   : left;
 }

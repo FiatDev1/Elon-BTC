@@ -8,30 +8,22 @@
     <title>Dashboard</title>
 
     <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/jquery.modal.min.css">
     <link rel="stylesheet" href="styles/dataTables.dataTables.min.css">
     <link rel="stylesheet" href="styles/dataTables.jqueryui.min.css">
     <link rel="stylesheet" href="styles/responsive.dataTables.min.css">
-    <link rel="stylesheet" href="styles/jquery.modal.min.css">
-    <!-- <link rel="stylesheet" href="./styles/fontawesome/css/all.css"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" /> -->
-    <!-- <link rel="stylesheet" href="styles/cards.css"> -->
-    <!-- <link rel="stylesheet" href="styles/profile.css"> -->
-    <!-- <link rel="stylesheet" href="styles/referrals.css"> -->
     <link rel="shortcut icon" href="./images/bitcoin-btc-logo.svg" type="image/x-icon">
-    <!-- <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script> -->
-
 </head>
 
 <body>
 
     <!-- ==========Top Navigation======= -->
     <div class="nav">
-        <div class="logo">
+        <a class="logo" href="dashboard.html">
             <img src="images/bitcoin-btc-logo.svg" alt="">
             <span class="logoTxt">ElonBTC</span>
-        </div>
+        </a>
         <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
     </div>
 
@@ -111,36 +103,38 @@
 
                 <!-- ==========Dashboard Cards======= -->
                 <div class="main-card_container">
-                    <div class="main-card">
-                        <div class="main-card_content">
-                            <div class="card-price">
-                                <span class="balance">$100</span>
-                                <p class="card-txt">Wallet</p>
-                            </div>
-                            <div class="card-icon">
-                                <i class="fas fa-wallet"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-card">
-                        <div class="main-card_content">
-                            <div class="card-price">
-                                <span class="balance">$500</span>
-                                <p class="card-txt">Earnings</p>
-                            </div>
-                            <div class="card-icon">
-                                <i class="fas fa-hand-holding-dollar"></i>
+                    <div class="main-card_content">
+                        <div class="main-card">
+                            <div class="main-card_body">
+                                <div class="card-price">
+                                    <span class="balance">$100</span>
+                                    <p class="card-txt">Wallet</p>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="main-card">
-                        <div class="main-card_content">
-                            <div class="card-price">
-                                <span class="balance">$700</span>
-                                <p class="card-txt">Referral Bonus</p>
+                        <div class="main-card">
+                            <div class="main-card_body">
+                                <div class="card-price">
+                                    <span class="balance">$500</span>
+                                    <p class="card-txt">Earnings</p>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-hand-holding-dollar"></i>
+                                </div>
                             </div>
-                            <div class="card-icon">
-                                <i class="fas fa-arrows-down-to-people"></i>
+                        </div>
+                        <div class="main-card">
+                            <div class="main-card_body">
+                                <div class="card-price">
+                                    <span class="balance">$700</span>
+                                    <p class="card-txt">Referral Bonus</p>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-arrows-down-to-people"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -235,8 +229,9 @@
                         Deposit History
                     </div><br>
 
-                    <table id="example1" class="display styled-table">
+                    <table id="example1" class="display styled-table" style="width: 100%;">
                         <thead>
+                            <th>Reference No</th>
                             <th>Package</th>
                             <th>Amount</th>
                             <th>Status</th>
@@ -289,7 +284,7 @@
                         Withdrawal History
                     </div><br>
 
-                    <table id="example2" class="display styled-table">
+                    <table id="example2" class="display styled-table" style="width: 100%;">
                         <thead>
                             <th>Reference No</th>
                             <th>Package</th>
@@ -300,7 +295,15 @@
 
                         <tbody>
                             <tr class="active-row">
-                                <td>11002093</td>
+                                <td>11002091</td>
+                                <td>Basic</td>
+                                <td>$50</td>
+                                <td>Pending</td>
+                                <td>2022-07-12 11:07am</td>
+                            </tr>
+
+                            <tr class="">
+                                <td>11002092</td>
                                 <td>Basic</td>
                                 <td>$50</td>
                                 <td>Pending</td>
@@ -316,15 +319,7 @@
                             </tr>
 
                             <tr class="">
-                                <td>11002093</td>
-                                <td>Basic</td>
-                                <td>$50</td>
-                                <td>Pending</td>
-                                <td>2022-07-12 11:07am</td>
-                            </tr>
-
-                            <tr class="">
-                                <td>11002093</td>
+                                <td>11002094</td>
                                 <td>Basic</td>
                                 <td>$50</td>
                                 <td>Pending</td>
@@ -344,7 +339,7 @@
                         My Referrals
                     </div><br>
 
-                    <table id="example3" class="display styled-table">
+                    <table id="example3" class="display styled-table" style="width: 100%;">
                         <thead>
                             <th>Avatar</th>
                             <th>Name</th>
@@ -517,7 +512,6 @@
 </body>
 
 
-<script src="js/script.js"></script>
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/jquery.dataTables.min.js"></script>
 <script src="js/dataTables.jqueryui.min.js"></script>
@@ -528,9 +522,10 @@
         $('#example1,#example2,#example3,#example4').DataTable();
     })
 </script>
+<script src="js/script.js"></script>
 <script src="js/requests.js"></script>
 <script src="js/Crypto.js"></script>
 <script src="js/main.js"></script>
-<script src="js/session.js"></script>
+<!-- <script src="js/session.js"></script> -->
 
 </html>

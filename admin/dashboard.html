@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,27 +12,20 @@
     <link rel="stylesheet" href="../styles/jquery.modal.min.css">
     <link rel="stylesheet" href="../styles/dataTables.dataTables.min.css">
     <link rel="stylesheet" href="../styles/dataTables.jqueryui.min.css">
+    <link rel="stylesheet" href="../styles/scroller.jqueryui.min.css">
     <link rel="stylesheet" href="../styles/responsive.dataTables.min.css">
-    <link rel="stylesheet" href="../styles/fontawesome/css/all.min.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" /> -->
-    <link rel="stylesheet" href="../styles/cards.css">
-    <link rel="stylesheet" href="../styles/profile.css">
-    <link rel="stylesheet" href="../styles/referrals.css">
     <link rel="shortcut icon" href="../images/bitcoin-btc-logo.svg" type="image/x-icon">
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-
 </head>
 
 <body>
 
     <!-- ==========Top Navigation======= -->
     <div class="nav">
-        <div class="logo">
-            <img src="../images/bitcoin-btc-logo.svg" alt="">
+        <a class="logo" href="dashboard.html">
+             <img src="../images/bitcoin-btc-logo.svg" alt="">
             <span class="logoTxt">ElonBTC</span>
-        </div>
+        </a>
         <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
     </div>
 
@@ -114,40 +107,63 @@
 
                 <!-- ==========Dashboard Cards======= -->
                 <div class="main-card_container">
-                    <div class="main-card">
-                        <div class="main-card_content">
-                            <div class="card-price">
-                                <span class="balance">$100</span>
-                                <p class="card-txt">Wallet</p>
+                    <div class="main-card_content">
+                        <div class="main-card">
+                            <div class="main-card_body">
+                                <div class="card-price">
+                                    <span class="balance">$100000</span>
+                                    <p class="card-txt">Wallet</p>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
                             </div>
-                            <div class="card-icon">
-                                <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="main-card">
+                            <div class="main-card_body">
+                                <div class="card-price">
+                                    <span class="balance">$50000</span>
+                                    <p class="card-txt">Total User Earnings</p>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-hand-holding-dollar"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-card">
+                            <div class="main-card_body">
+                                <div class="card-price">
+                                    <span class="balance">1</span>
+                                    <p class="card-txt">All Referrals</p>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-arrows-down-to-people"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-card">
+                            <div class="main-card_body">
+                                <div class="card-price">
+                                    <span class="balance">1</span>
+                                    <p class="card-txt">All Referrals</p>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-arrows-down-to-people"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-card">
+                            <div class="main-card_body">
+                                <div class="card-price">
+                                    <span class="balance">1</span>
+                                    <p class="card-txt">All Referrals</p>
+                                </div>
+                                <div class="card-icon">
+                                    <i class="fas fa-arrows-down-to-people"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="main-card">
-                        <div class="main-card_content">
-                            <div class="card-price">
-                                <span class="balance">$500</span>
-                                <p class="card-txt">Earnings</p>
-                            </div>
-                            <div class="card-icon">
-                                <i class="fas fa-hand-holding-dollar"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-card">
-                        <div class="main-card_content">
-                            <div class="card-price">
-                                <span class="balance">$700</span>
-                                <p class="card-txt">Referral Bonus</p>
-                            </div>
-                            <div class="card-icon">
-                                <i class="fas fa-arrows-down-to-people"></i>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
@@ -229,9 +245,9 @@
                                 <td>Bankole Emmanuel</td>
                                 <td>emmafikayomi@gmail.com</td>
                                 <td>Not Active</td>
-                                <td class="action-btn"><button
-                                        class="action-btn check-btn"><i class="fas fa-check"></i></button><a href="#ex1"
-                                        rel="modal:open" class="action-btn delete-btn"><i class="fas fa-trash"></i></a>
+                                <td class="action-btn"><button class="action-btn check-btn"><i
+                                            class="fas fa-check"></i></button><a href="#ex1" rel="modal:open"
+                                        class="action-btn delete-btn"><i class="fas fa-trash"></i></a>
                                 </td>
                                 <td>2022-07-12 11:07am</td>
                             </tr>
@@ -457,7 +473,7 @@
         <div class="modal-title">
             <h2>Delete Confirmation</h2>
         </div><br>
-        <div class="modal-content">Are you sure you want to delete this record?</div>
+        <div class="modal-content-del">Are you sure you want to delete this record?</div>
         <div class="modal-buttons">
             <a href="#" class="action-btn check-btn">Yes</a>
             <a href="#" rel="modal:close" class="action-btn delete-btn">No</a>
@@ -474,6 +490,7 @@
 <script src="../js/jquery-3.6.0.min.js"></script>
 <script src="../js/jquery.dataTables.min.js"></script>
 <script src="../js/dataTables.jqueryui.min.js"></script>
+<script src="../js/scroller.jqueryui.min.js"></script>
 <script src="../js/responsive.dataTables.min.js"></script>
 <script src="../js/jquery.modal.min.js"></script>
 <script type="text/javascript">

@@ -40,8 +40,7 @@ function openNav() {
 };
 
 function closeNav() {
-  document.getElementById('sidenav').style.display = 'none'
-  document.getElementById('sidenav').style.transition = '.5s';
+  document.getElementById('sidenav').style.display = 'none';
 };
 
 

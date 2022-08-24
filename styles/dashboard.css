@@ -21,17 +21,19 @@ html {
 /* custom scroll bar */
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-track {
     background: #f1f1f1;
-  }
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     background: #888;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
+}
 
 
 body {
@@ -42,33 +44,35 @@ body {
     transition      : 0.3s ease;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.action-btn{
+.action-btn {
     margin: 4px;
     cursor: pointer;
 
 }
 
-.check-btn, .delete-btn{
-    border: none;
-    outline: none;
+.check-btn,
+.delete-btn {
+    border          : none;
+    outline         : none;
     background-color: none;
-    color: white;
-    padding: 6px;
-    border-radius: 4px;
+    color           : white;
+    padding         : 6px;
+    border-radius   : 4px;
 }
 
-.check-btn{
+.check-btn {
     background-color: green;
 }
 
-.delete-btn{
+.delete-btn {
     background-color: rgb(198, 0, 0);
 }
 
+/* dashboard navigation styling */
 .nav {
     position       : fixed;
     display        : flex;
@@ -83,6 +87,8 @@ a{
     z-index        : 999;
 }
 
+
+/* dashboard mobile navigation styling */
 .sideNav {
     height          : 100%;
     width           : 250px;
@@ -95,19 +101,28 @@ a{
     padding-top     : 60px;
     z-index         : 999;
     display         : none;
-    animation       : slide-in .6s;
+    animation       : slide-in .8s;
     opacity         : 1;
 }
 
+@keyframes slide-in {
+    0% {
+        transform: translateX(200px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
 .sideNav .closeBtn {
-    position        : absolute;
-    top             : 10px;
-    right           : 25px;
-    font-size       : 24px;
-    margin-left     : 50px;
-    cursor          : pointer;
-    color           : #fff;
-    /* margin-bottom: 10%; */
+    position   : absolute;
+    top        : 25px;
+    right      : 10px;
+    font-size  : 24px;
+    margin-left: 50px;
+    cursor     : pointer;
+    color      : #fff;
 }
 
 .logo {
@@ -128,10 +143,14 @@ a{
     margin-left: 10px;
 }
 
+.closeBtn i,
+.hamburger i {
+    font-size: 29px;
+}
+
 .hamburger {
-    font-size: 24px;
-    display  : none;
-    color    : #fff;
+    display: none;
+    color  : #fff;
 }
 
 .dashboard {
@@ -243,14 +262,14 @@ a{
 /* Dashboard main area */
 
 .main {
-    width           : calc(100% - 20%);
-    height          : 100vh;
-    margin-top      : 70px;
-    margin-left     : 20%;
+    width      : calc(100% - 20%);
+    height     : 100vh;
+    margin-top : 70px;
+    margin-left: 20%;
 }
 
 .main-menu {
-    margin-top   : -50px;
+    margin-top: -50px;
 }
 
 
@@ -270,16 +289,24 @@ a{
 .sidebar-buttons span {}
 
 .main-card_container {
-    display        : flex;
-    flex-direction : row;
-    width          : 100%;
-    flex-direction : row;
-    justify-content: center;
+    /* display        : flex; */
+    /* flex-direction : row; */
+    /* width          : 100%; */
+    /* flex-direction : row; */
+    /* justify-content: center; */
     padding        : 15px 10px;
 }
 
+.main-card_content{
+    /* border: 2px solid black; */
+    /* display: ; */
+    justify-content: center;
+    align-items    : center;
+    flex-wrap      : wrap;
+}
+
 .main-card_container .main-card {
-    width        : 350px;
+    width        : 330px;
     display      : inline-block;
     background   : linear-gradient(45deg, #880fc4 0%, #1d39f2 100%);
     color        : white;
@@ -289,12 +316,12 @@ a{
     padding      : 25px 0;
 }
 
-.main-card .main-card_content {
+.main-card .main-card_body {
     display        : flex;
     flex-direction : row;
     justify-content: space-evenly;
     align-items    : center;
-    padding        : 10px 0;
+    padding        : 8px 0;
 }
 
 .card-price {
@@ -324,8 +351,8 @@ a{
 }
 
 .modal-content {
-    text-align      : center !important;
-    position        : relative;
+    text-align: center !important;
+    position  : relative;
 }
 
 .modal-content h1 {
@@ -380,24 +407,24 @@ select {
 }
 
 .modal-content button {
-    outline            : none;
-    border             : none;
-    cursor             : pointer;
-    color              : white;
-    background-color   : #880fc4;
-    padding            : 14px 22px;
-    border-radius      : 30px;
+    outline         : none;
+    border          : none;
+    cursor          : pointer;
+    color           : white;
+    background-color: #880fc4;
+    padding         : 14px 22px;
+    border-radius   : 30px;
 }
 
 /* Referral styling*/
 .referral-container {
-    width     : 100%;
-    max-width : 1140px;
-    margin    : 0 auto;
-  }
-  
-  /* Referral Responsive Table Style */
-  .responsive-table {
+    width    : 100%;
+    max-width: 1140px;
+    margin   : 0 auto;
+}
+
+/* Referral Responsive Table Style */
+.responsive-table {
     background-color: #fefefe;
     border-collapse : collapse;
     border-radius   : 10px;
@@ -405,15 +432,15 @@ select {
     width           : 100%;
     margin          : 2rem 0;
     overflow        : hidden;
-  }
-  
-  /* Referral SVG User Icon Style */
-  .user-icon {
+}
+
+/* Referral SVG User Icon Style */
+.user-icon {
     width       : 100%;
     max-width   : 4rem;
     height      : 50px;
     margin-right: 1rem;
-  }
+}
 
 
 
@@ -442,13 +469,16 @@ select {
     }
 
     .dashboard-title {
-        padding       : 50px 15px;
+        padding: 50px 15px;
     }
 
     .main-card_container {
         display: block;
     }
 
+    .main-card_content{
+        display: flex;
+    }
 
     .main .main-header .hamburger {
         display: block;
