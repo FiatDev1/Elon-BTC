@@ -12,6 +12,7 @@ function LoginRequest(email, password) {
     if(data.state == false || data.err == 404){
       showAlert('alert-danger', data.message);
     }else{
+      showAlert('alert-success', data.message);
       session_start(data);
     }
     //!data.state && data.err == 404 ? showAlert('alert-danger', data.message) : session_start(data);
@@ -93,6 +94,7 @@ function showAlert(type, message){
 function session_start(data){
   if (createSession(data)) {
     if(data.access_level == 'user' && data.status == 1){
+      console.log(data);
       redirect('./dashboard');
     }else if(data.access_level == 'admin' && data.status == 1){
       redirect('./admin/dashboard');
@@ -102,9 +104,9 @@ function session_start(data){
 
 function session_destroy(){
   sessionStorage.clear();
-
   return true;
 }
+
 function createSession(data) {
   sessionStorage.setItem('id', data.id);
   sessionStorage.setItem('fullname', data.fullname);
