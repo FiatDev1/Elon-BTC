@@ -1,15 +1,6 @@
-* {
-    padding   : 0;
-    margin    : 0;
-    box-sizing: border-box;
-}
+@import url('./style.css');
 
-body {
-    background: linear-gradient(90deg, #880fc4 0%, #1d39f2 100%);
-}
-
-main {
-    /* border: 3px greenyellow solid; */
+.validation-container{
     margin-top:15%;
     display        : flex;
     align-items    : center;
@@ -19,20 +10,12 @@ main {
 
 .card {
     background-color: #fff;
-    padding         : 50px 60px 50px 60px;
+    padding         : 20px 80px 40px 80px;
     border-radius   : 20px;
     text-align      : center;
     display         : flex;
     flex-direction  : column;
-    /* line-height: 40px; */
     justify-content : center;
-    /* width        : 650px; */
-    /* height       : 700px; */
-}
-
-.card-icon{
-
-
 }
 
 .card-icon i{
@@ -42,10 +25,8 @@ main {
     background-color: #de9f21;
     padding: 10px;
     align-items: center;
-    /* justify-content: center; */
     border-radius: 50%;
     color: #fff;
-    /* color: white; */
 }
 
 .card-title h1 {

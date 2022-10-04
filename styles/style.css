@@ -1,21 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('fontawesome/css/all.min.css');
+
 
 /* Reset Style */
-* {
-  padding    : 0;
-  margin     : 0;
-  box-sizing : border-box;
-  /* overflow: hidden; */
+*,
+*::after,
+*::before {
+  padding   : 0;
+  margin    : 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 
 body {
-  /* background : linear-gradient(45deg, #56127a, #4a15dd); */
+  /* background : linear-gradient(45deg, #  56127a, #4a15dd); */
   background     : linear-gradient(90deg, #880fc4 0%, #1d39f2 100%);
   font-family    : "roboto", sans-serif;
   scroll-behavior: smooth;
   transition     : 0.3s ease;
 }
+
+a{
+  text-decoration: none;
+}
+
+/* loader style */
+
+/* .loading {
+  height  : 100vh !important;
+  overflow: hidden !important;
+} */
+
+/* .preloader {
+  position           : absolute;
+  top                : 0;
+  left               : 0;
+  bottom             : 0;
+  right              : 0;
+  z-index            : 99999999;
+  width              : 100%;
+  height             : 100vh;
+  background-image   : url('/images/Ball-Drop-Preloader-1-1.gif');
+  background-repeat  : no-repeat;
+  background-color   : #fff;
+  background-position: center;
+} */
 
 
 /* bottom to top arrow */
@@ -41,15 +91,14 @@ body {
 /* all content inside main */
 main {
   margin-top: 70px;
-  /* border : 2px solid #d9aac7; */
 }
 
+/* ===========live coinPrices style=========== */
 .live-coinPrices {
   overflow: hidden;
 }
 
-
-/* button style */
+/* General button style */
 .button {
   padding      : 8px 15px;
   background   : transparent;
@@ -68,13 +117,13 @@ main {
   transition      : 0.3s ease all;
 }
 
-/* Navigation */
+/*nav logo styling */
 .logo-img {
   width : 50px;
   height: 50px;
 }
 
-/* Mobile hamburger */
+/* hamburger */
 .hamburger {
   color    : white;
   font-size: 25px;
@@ -87,6 +136,7 @@ main {
   background-color: #6a03a1;
 }
 
+/* navigation styling */
 nav {
   width          : 100%;
   height         : 50px;
@@ -101,7 +151,6 @@ nav {
   overflow       : hidden;
   z-index        : 9999;
 }
-
 
 nav .logo {
   color      : white;
@@ -167,7 +216,6 @@ nav ul li a:hover:before {
   color: #de9f21;
 }
 
-
 /* style for mobile navigation */
 .sideNav {
   height          : 100%;
@@ -209,15 +257,15 @@ nav ul li a:hover:before {
 }
 
 .sideNav .closeBtn {
-  position        : absolute;
-  top             : 10px;
-  right           : 25px;
-  font-size       : 24px;
-  margin-left     : 50px;
-  cursor          : pointer;
-  /* margin-bottom: 10%; */
+  position   : absolute;
+  top        : 10px;
+  right      : 25px;
+  font-size  : 24px;
+  margin-left: 50px;
+  cursor     : pointer;
 }
 
+/* Get started styling */
 .start_up {
   display              : grid;
   grid-template-columns: repeat(2, 1fr);
@@ -228,8 +276,7 @@ nav ul li a:hover:before {
 }
 
 .start_up .img-sec img {
-  width    : 100%;
-  /* border: 2px red solid; */
+  width: 100%;
 }
 
 .start_up h1 {
@@ -263,7 +310,6 @@ nav ul li a:hover:before {
 .plan-card {
   color           : white;
   background-color: rgba(255, 255, 255, 0.225);
-  ;
   width          : 300px;
   border         : none;
   border-radius  : 14px;
@@ -273,7 +319,6 @@ nav ul li a:hover:before {
   margin         : 6px;
   padding-top    : 25px;
   padding-bottom : 25px;
-  /* box-shadow  : rgba(0, 0, 0, 0.24) 0px 3px 8px; */
   box-shadow     : rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
@@ -308,8 +353,6 @@ nav ul li a:hover:before {
 }
 
 
-
-
 /* ==========faq menu======== */
 
 
@@ -327,7 +370,6 @@ nav ul li a:hover:before {
   align-items    : center;
   padding        : 20px;
 }
-
 
 .faq-section .faq-img {
   width: 500px;
@@ -386,7 +428,6 @@ nav ul li a:hover:before {
   color          : #fff;
 }
 
-
 .faq.active .answer {
   max-height: 1200px;
   animation : fade 1s ease-in-out;
@@ -412,23 +453,13 @@ svg {
   }
 }
 
-
-/* =============End of faq menu======== */
-
-
-
 /* =========About us===================== */
-.about-us-container {}
-
 .about-us_body {
   display              : grid;
   grid-template-columns: repeat(2, 1fr);
   align-items          : center;
   padding              : 15px 30px 15px 30px;
-
-
 }
-
 
 .about-us-menu .about-us_body .about-us-img {
   display        : flex;
@@ -469,7 +500,6 @@ svg {
 }
 
 
-
 /* ==========Testimonial style=========== */
 .swiper-menu {
   padding: 0 14px 0 14px;
@@ -477,8 +507,7 @@ svg {
 }
 
 .swiper-container {
-  max-width : 500px;
-  /* z-index: -9999; */
+  max-width: 500px;
 }
 
 .swiper-title {
@@ -515,7 +544,6 @@ svg {
   color        : rgb(214, 214, 214);
   padding      : 20px 30px;
   border-radius: 15px;
-  /* box-shadow   : 10px 20px 25px rgba(0, 0, 0, 0.2); */
 }
 
 .swiper .swiper-slide_content img {
@@ -572,24 +600,16 @@ svg {
   background-color: #fff;
 }
 
-/* =========end of testimonial style========= */
-
-
 
 /* ==counters=== */
 .counters {
-  padding         : 50px 0;
-  /* background-color: #fff; */
-  /* color           : #0d6fdd; */
-  color: white;
+  padding: 50px 0;
+  color  : white;
 }
 
 .common-box {
-  /* width         : calc(100% / 4 - 4px); */
-  /* display       : inline-block; */
-  /* vertical-align: top; */
-  text-align    : center;
-  margin: 50px;
+  text-align: center;
+  margin    : 50px;
 }
 
 .counter-num {
@@ -603,17 +623,11 @@ svg {
   line-height: normal;
 }
 
-#inview-example{
-  display: flex;
-  flex-direction: row;
+#inview-example {
+  display        : flex;
+  flex-direction : row;
   justify-content: center;
 }
-
-
-
-
-
-
 
 
 /* ==footer=== */
@@ -695,11 +709,9 @@ footer p {
 }
 
 .flogo {
-  /* position   : relative; */
-  width             : 25%;
-  display           : flex;
-  /* justify-content: center; */
-  align-items       : center;
+  width      : 25%;
+  display    : flex;
+  align-items: center;
 }
 
 
@@ -719,7 +731,6 @@ footer p {
   align-items    : center;
 }
 
-.input-field {}
 
 input {
   height          : 45px;
@@ -744,11 +755,7 @@ input {
 
 
 
-
-
-
-
-/**** Responsive design *****/
+/**** Mobile Responsive design *****/
 @media screen and (max-width:578px) {
 
   .hamburger {
@@ -832,17 +839,15 @@ input {
   .swiper-title h5 {
     font-size: 1rem
   }
+
+  #inview-example {
+    display: block;
+  }
 }
 
 
-@media screen and (max-width:768px) {
-  /* .plan-menu{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-
-  } */
-}
+/* @media screen and (max-width:768px) {
+} */
 
 
 @media screen and (max-width: 992px) {
@@ -895,9 +900,6 @@ input {
     padding: 0;
   }
 
-  .faq-section .faq-img img {
-    /* width: 340px; */
-  }
 
   .about-us_body {
     display: block;
@@ -941,11 +943,6 @@ input {
     width: 100%;
   }
 
-  .copyrightText {
-    /* padding: 8px 40px; */
-  }
-
-
 
 }
 
@@ -955,7 +952,7 @@ input {
 
 
 
-
+/* circle animation styling */
 .area {
   background: #4e54c8;
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
@@ -972,6 +969,7 @@ input {
   width   : 100%;
   height  : 100vh;
   overflow: hidden;
+  z-index : -1;
 }
 
 .circles li {
@@ -1077,5 +1075,4 @@ input {
     opacity      : 0;
     border-radius: 50%;
   }
-
 }

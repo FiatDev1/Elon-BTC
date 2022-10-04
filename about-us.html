@@ -11,31 +11,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
         rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
     <link rel="stylesheet" href="/swiper-assests/swiper-bundle.min.css">
     <link rel="shortcut icon" href="./images/bitcoin-btc-logo.svg" type="image/x-icon">
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 </head>
 
 <body>
 
     <nav>
-        <div class="logo">
-            <!-- <a href="" class="logo"> -->
+        <a class="logo" href="index.html">
             <img src="images/bitcoin-btc-logo.svg" alt="logo">
-            <!-- <div> -->
             <span>ELON BTC</span>
-            <!-- </div> -->
-            </a>
+        </a>
         </div>
 
         <span class="hamburger" id="hamburger"><i class="fas fa-bars"></i></span>
         <div class="navLinks">
             <ul>
                 <li><a href="index.html"> Home </a></li>
-                <!-- <li><a href=""> Services </a></li> -->
                 <li><a href="about-us.html"> About Us </a></li>
-                <li><a href="#faq"> Faq </a></li>
                 <li><a href="contact-us.html"> Contact Us </a></li>
                 <a href="login.html" class="button">Login</a>
             </ul>
@@ -46,7 +39,6 @@
     <div class="sideNav" id="sidenav">
         <a class="closeBtn" id="close"><i class="fas fa-times"></i></a>
         <a href="index.html">Home</a>
-        <!-- <a href="">Services</a> -->
         <a href="about-us.html">About Us</a>
         <a href="">Faq</a>
         <a href="contact-us.html">Contact</a>
@@ -68,59 +60,42 @@
     </div>
 
     <main>
-        <div class="card-container">
-            <div class="card-box">
-                <div class="card-icon">
-                    <img src="images/Effective-sec-item-img1.png" alt="">
-                </div>
-                <div class="card-title">
-                    Founding
-                </div>
-                <div class="card-desc">
-                    HKBMine international group was founded in New York in 2009 and was jointly founded by top
-                    investment institutions in the United States and Canada.
-                </div>
-            </div>
 
-            <div class="card-box">
-                <div class="card-icon">
-                    <img src="images/Effective-sec-item-img2.png" alt="">
-                </div>
-                <div class="card-title">
-                    Main business
-                </div>
-                <div class="card-desc">
-                    It is mainly engaged in frontier fields such as life science and technology, artificial
-                    intelligence, aerospace exploration and blockchain.
-                </div>
-            </div>
 
-            <div class="card-box">
-                <div class="card-icon">
-                    <img src="images/Effective-sec-item-img3.png" alt="">
-                </div>
-                <div class="card-title">
-                    Investment
-                </div>
-                <div class="card-desc">
-                    He has participated in the listing projects of Tesla, paypal and other well-known companies, as well
-                    as financing mergers and acquisitions and so on...
-                </div>
-            </div>
 
-            <div class="card-box">
-                <div class="card-icon">
-                    <img src="images/Effective-sec-item-img4.png" alt="">
-                </div>
-                <div class="card-title">
-                    Union
-                </div>
-                <div class="card-desc">
-                    HKBMine team cooperates with 245 scientific research teams from 120 universities and research
-                    institutions in 18 countries around the world.
+        <section class="services" id="services">
+            <div class="max-width">
+                <div class="serv-content">
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-paint-brush"></i>
+                            <div class="text">Founding</div>
+                            <p> HKBMine international group was founded in New York in 2009 and was jointly founded by
+                                top
+                                investment institutions in the United States and Canada.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="text">Main business</div>
+                            <p>It is mainly engaged in frontier fields such as life science and technology, artificial
+                                intelligence, aerospace exploration and blockchain.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-code"></i>
+                            <div class="text">Investment</div>
+                            <p>He has participated in the listing projects of Tesla, paypal and other well-known
+                                companies, as well
+                                as financing mergers and acquisitions and so on...</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
 
 
 
@@ -279,13 +254,8 @@
         <p>Copyright &copy; 2020 Elon Mine. All Rights Reserved.</p>
     </div>
 
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-    <script>
-        AOS.init();
-    </script>
-
-
-    <script src="js/script.js"></script>
 </body>
+<script src="js/script.js"></script>
+
 
 </html>

@@ -1,10 +1,9 @@
+@import url('./fontawesome/css/all.min.css');
+@import url('./cards.css');
+@import url('./profile.css');
+@import url('./table.css');
 @import url('./main.css');
-
-/* @import url('./all.css'); */
-html {
-    scroll-behavior: smooth;
-    transition     : 0.3s ease;
-}
+@import url('./deposit.css');
 
 * {
     padding    : 0;
@@ -12,6 +11,30 @@ html {
     font-size  : 16px;
     font-family: "Helvetica Neue";
 }
+
+
+html {
+    scroll-behavior: smooth;
+    transition     : 0.3s ease;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 
 body {
     overflow-y      : auto;
@@ -21,6 +44,35 @@ body {
     transition      : 0.3s ease;
 }
 
+a {
+    text-decoration: none;
+}
+
+.action-btn {
+    margin: 4px;
+    cursor: pointer;
+
+}
+
+.check-btn,
+.delete-btn {
+    border          : none;
+    outline         : none;
+    background-color: none;
+    color           : white;
+    padding         : 6px;
+    border-radius   : 4px;
+}
+
+.check-btn {
+    background-color: green;
+}
+
+.delete-btn {
+    background-color: rgb(198, 0, 0);
+}
+
+/* dashboard navigation styling */
 .nav {
     position       : fixed;
     display        : flex;
@@ -35,6 +87,8 @@ body {
     z-index        : 999;
 }
 
+
+/* dashboard mobile navigation styling */
 .sideNav {
     height          : 100%;
     width           : 250px;
@@ -47,19 +101,28 @@ body {
     padding-top     : 60px;
     z-index         : 999;
     display         : none;
-    animation       : slide-in .6s;
+    animation       : slide-in .8s;
     opacity         : 1;
 }
 
+@keyframes slide-in {
+    0% {
+        transform: translateX(200px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
 .sideNav .closeBtn {
-    position        : absolute;
-    top             : 10px;
-    right           : 25px;
-    font-size       : 24px;
-    margin-left     : 50px;
-    cursor          : pointer;
-    color           : #fff;
-    /* margin-bottom: 10%; */
+    position   : absolute;
+    top        : 25px;
+    right      : 10px;
+    font-size  : 24px;
+    margin-left: 50px;
+    cursor     : pointer;
+    color      : #fff;
 }
 
 .logo {
@@ -80,10 +143,14 @@ body {
     margin-left: 10px;
 }
 
+.closeBtn i,
+.hamburger i {
+    font-size: 29px;
+}
+
 .hamburger {
-    font-size: 24px;
-    display  : none;
-    color    : #fff;
+    display: none;
+    color  : #fff;
 }
 
 .dashboard {
@@ -92,10 +159,6 @@ body {
     flex-direction: row;
 }
 
-.main-menu {
-    margin-top: -50px;
-    /* text-align: center; */
-}
 
 .dashboard-title {
     display        : flex;
@@ -121,7 +184,6 @@ body {
 }
 
 .top-btn2 {
-    width           : 120px;
     background-color: #de9f21;
     padding         : 8px 14px;
     color           : white;
@@ -153,7 +215,6 @@ body {
     text-decoration           : none;
     color                     : #fff;
     cursor                    : pointer;
-    /* font-size              : small; */
     transition                : 0.3s ease 1;
     border-top-right-radius   : 50px;
     border-bottom-right-radius: 50px;
@@ -198,23 +259,23 @@ body {
     color: #ababab;
 }
 
+/* Dashboard main area */
+
 .main {
-    /* position: relative; */
-    width           : calc(100% - 20%);
-    height          : 100vh;
-    margin-top      : 70px;
-    margin-left     : 20%;
-    /* margin       : 0 1rem; */
-    /* padding      : 0; */
-    /* text-align   : center; */
-    /* display      : block; */
+    width      : calc(100% - 20%);
+    height     : 100vh;
+    margin-top : 70px;
+    margin-left: 20%;
+}
+
+.main-menu {
+    margin-top: -50px;
 }
 
 
 .main-header {
     display        : flex;
     flex           : auto;
-    /* float       : right; */
     justify-content: space-between;
     padding        : 10px 8px 10px 8px;
     color          : #fff;
@@ -228,16 +289,24 @@ body {
 .sidebar-buttons span {}
 
 .main-card_container {
-    display        : flex;
-    flex-direction : row;
-    width          : 100%;
-    flex-direction : row;
-    justify-content: center;
+    /* display        : flex; */
+    /* flex-direction : row; */
+    /* width          : 100%; */
+    /* flex-direction : row; */
+    /* justify-content: center; */
     padding        : 15px 10px;
 }
 
+.main-card_content{
+    /* border: 2px solid black; */
+    /* display: ; */
+    justify-content: center;
+    align-items    : center;
+    flex-wrap      : wrap;
+}
+
 .main-card_container .main-card {
-    width        : 350px;
+    width        : 330px;
     display      : inline-block;
     background   : linear-gradient(45deg, #880fc4 0%, #1d39f2 100%);
     color        : white;
@@ -247,12 +316,12 @@ body {
     padding      : 25px 0;
 }
 
-.main-card .main-card_content {
+.main-card .main-card_body {
     display        : flex;
     flex-direction : row;
     justify-content: space-evenly;
     align-items    : center;
-    padding        : 10px 0;
+    padding        : 8px 0;
 }
 
 .card-price {
@@ -276,37 +345,14 @@ body {
 
 /* ======withdrawal Modal pop up============ */
 
-.bg-modal {
-    width           : 100%;
-    height          : 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    position        : fixed;
-    top             : 0;
-    display         : flex;
-    justify-content : center;
-    align-items     : center;
-    display         : none;
-    text-align      : center;
-}
-
-.bg-modal::backdrop {
-    /* background-color: #1d39f2; */
-}
 
 .modal-content i {
     font-size: 24px;
 }
 
 .modal-content {
-    width           : 380px;
-    height          : auto;
-    background-color: white;
-    border-radius   : 24px;
-    opacity         : 1;
-    text-align      : center !important;
-    padding         : 40px;
-    position        : relative;
-    line-height     : 40px;
+    text-align: center !important;
+    position  : relative;
 }
 
 .modal-content h1 {
@@ -314,7 +360,6 @@ body {
 }
 
 #wallet-balance {
-    /* font-weight: bold; */
     font-size    : 35px;
     margin-bottom: 10px;
 }
@@ -325,7 +370,6 @@ body {
 }
 
 .modal-content .input-field {
-    /* width                : 400px; */
     height               : 55px;
     background-color     : #f0f0f0;
     margin               : 10px 0;
@@ -363,36 +407,40 @@ select {
 }
 
 .modal-content button {
-    outline            : none;
-    border             : none;
-    cursor             : pointer;
-    color              : white;
-    background-color   : #880fc4;
-    /* font-weight     : ; */
-    padding            : 14px 22px;
-    border-radius      : 30px;
+    outline         : none;
+    border          : none;
+    cursor          : pointer;
+    color           : white;
+    background-color: #880fc4;
+    padding         : 14px 22px;
+    border-radius   : 30px;
 }
 
-.closebtn {
-    position : absolute;
-    top      : 0;
-    right    : 14px;
-    font-size: 42px;
-    transform: rotate(45deg);
-    cursor   : pointer;
+/* Referral styling*/
+.referral-container {
+    width    : 100%;
+    max-width: 1140px;
+    margin   : 0 auto;
 }
 
+/* Referral Responsive Table Style */
+.responsive-table {
+    background-color: #fefefe;
+    border-collapse : collapse;
+    border-radius   : 10px;
+    box-shadow      : 0 0 10px rgba(0, 0, 0, 0.02);
+    width           : 100%;
+    margin          : 2rem 0;
+    overflow        : hidden;
+}
 
-
-
-
-
-
-
-
-
-
-
+/* Referral SVG User Icon Style */
+.user-icon {
+    width       : 100%;
+    max-width   : 4rem;
+    height      : 50px;
+    margin-right: 1rem;
+}
 
 
 
@@ -421,17 +469,16 @@ select {
     }
 
     .dashboard-title {
-        /* display: inline-block; */
-        padding       : 50px 15px;
-        /* width      : 100%; */
-        /* margin-left: -20%; */
-
+        padding: 50px 15px;
     }
 
     .main-card_container {
         display: block;
     }
 
+    .main-card_content{
+        display: flex;
+    }
 
     .main .main-header .hamburger {
         display: block;

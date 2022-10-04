@@ -1,47 +1,55 @@
-@import url('./withdrawal.css');
-
-.deposit-card-header{
-    margin-bottom: 20px;
-    text-align: start;
-}
-
-.deposit-card-header h1 {
-    font-size: 24px;
-}
-
-
-.deposit-card img{
-    width: 80px;
-    height: 80px;
-}
-
-
-.deposit-btn{
-    border: none;
-    color: white;
-    padding: 12px;
-    color: white;
-    background-color: #1d39f2;
-    border-radius: 4px;
-    font-size: 18px;
-    cursor: pointer;
-    outline: none;
-}
-
-.deposit-card-menu{
-    display: flex;
-    justify-content: center !important;
-    align-items: center !important;
-}
 
 .deposit-card-container {
     display         : flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding         : 10px;
+    padding         : 20px;
     background-color: #fff;
     border-radius   : 20px;   margin: 20px;
+}
+
+.deposit-card-menu{
+    display: flex;
+}
+
+.deposit-card-header{
+    font-size  : 26px;
+    font-weight: 600;
+    padding    : 0 16px;
+    border-bottom: 2px solid black;
+    padding: 0 0 10px 0;
+}
+
+.deposit-card {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    text-align     : center;
+    width          : 500px;
+    padding: 25px 0;
+    border-radius  : 12px;
+    box-shadow     : 0px 0px 5px 1px #ccc;
+    line-height    : 50px;
+    margin         : 14px;
+}
+
+.deposit-card img{
+    width: 80px;
+    height: 80px;
+}
+
+.deposit-btn{
+    border: none;
+    color: white;
+    padding: 10px;
+    color: white;
+    background-color: #1d39f2;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
 }
 
 
@@ -49,13 +57,8 @@
     .deposit-card-menu{
         display: block;
     }
-
-    .deposit-card-container{
-    }
-
+    
     .deposit-card{
-        width: 200px;
-        height: auto;
-        margin: 0;
+        width: 300px;
     }
 }
