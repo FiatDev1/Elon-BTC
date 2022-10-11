@@ -3,6 +3,7 @@
         include_once '../config/database.php';
         include_once '../models/user.php';
         include_once '../models/referrals.php';
+        include_once '../models/wallet.php';
 
 
         $database = new Database();
@@ -10,6 +11,7 @@
 
         $user = new User($db);
         $referral = new Referral($db);
+        $wallet = new Wallet($db);
 
         $user->fullname = $_REQUEST['fullname'];
         $user->email = $_REQUEST['email'];
@@ -34,6 +36,26 @@
                 $res = array();
 
                 if ($user->createAccount()) {
+                    $user->emailExist($_REQUEST['email']);
+
+                    $wallet->user_id = $user->id;
+                    $wallet->public_wallet_address = hash("sha256", $user->fullname . $user->email . $user->created . $user->status);
+                    $wallet->private_wallet_address = hash("sha256", $user->status . $user->email . $user->fullname . $user->created);
+                    $wallet->balance = 0;
+                    $wallet->wallet_type = 1;
+                    $wallet->wallet_key = null;
+                    $wallet->access_code = md5("ELON" . rand(0, 10000000) . $user->email);
+                    $wallet->status = 1;
+
+                    if($wallet->createWallet()){
+                        //  do nothing
+                    }else{
+                        $user->deleteAccount($_REQUEST['email']);
+                        $res['message'] = "Something went wrong! That's all we know.";
+                        $res['err'] = 404;
+                        $res['state'] = false;
+                    }
+                    
                     if(isset($_REQUEST['referral']) && !empty($_REQUEST['referral'])){
                         if($user->emailExist($_REQUEST['referral'])){
                         

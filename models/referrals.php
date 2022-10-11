@@ -57,4 +57,31 @@
             $stmt->execute();
             return $stmt;
         }
+
+
+        function isRefferal($user_id){
+            $query = "SELECT * FROM " . $this->table_name . "
+            WHERE referral_id = {$user_id}
+            LIMIT 0,1";
+
+            $stmt = $this->conn->prepare($query);
+            $stmt->execute();
+
+            $count = $stmt->rowCount();
+
+            if($count > 0){
+                return true;
+            }
+            return false;
+        }
+
+        function readAll(){
+            $query = "SELECT * FROM " . $this->table_name . "
+            ORDER BY created ASC";
+
+            $stmt = $this->conn->prepare($query);
+            $stmt->execute();
+
+            return $stmt;
+        }
     }

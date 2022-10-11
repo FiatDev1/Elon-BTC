@@ -415,7 +415,21 @@ select {
     padding         : 14px 22px;
     border-radius   : 30px;
 }
-
+.profile-info{
+    text-align: center;
+}
+.h{
+    font-size: medium;
+    display: block;
+    text-align: center;
+}
+#refferalLink{
+    font-size: small;
+    color: #880fc4;
+    display: block;
+    text-align: center;
+    word-wrap: break-word;
+}
 /* Referral styling*/
 .referral-container {
     width    : 100%;

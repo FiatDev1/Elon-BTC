@@ -59,3 +59,10 @@ function disableButton(button){
   button.disabled = true;
 }
 
+function TransferCrypto(){
+  let wallet_address = document.getElementById('transfer-wallet-address').value;
+  let amount = document.getElementById('transfer-amount').value;
+  let btn = document.getElementById('transferCryptoBtn');
+  disableButton(btn);
+  TransferCryptoRequest(wallet_address, amount);
+}

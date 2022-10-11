@@ -38,6 +38,7 @@ function SignupRequest(fullname, email, password) {
     return response.json();
   }
   ).then(res =>{
+    console.log(res);
     if(!res.state){
       showAlert('alert-danger', res.message);
     }else{
@@ -70,6 +71,24 @@ function EmailExistsRequest(email){
     }
   })
 }
+
+function TransferCryptoRequest(wallet_address, amount){
+  fetch(`./api/transfer.php?my_wallet_address=${sessionStorage.getItem('wallet_address')}&wallet_address=${wallet_address}&amount=${amount}&user_id=${sessionStorage.getItem('id')}&token=${sessionStorage.getItem('wallet_key')}`, 
+  {
+    method : 'GET',
+    mode: 'no-cors',
+    cache: 'no-cache',
+    headers: { 'Content-type': 'application/json' }
+  }).then((res)=>{
+    return res.json();
+  })
+  .then((res)=>{
+      alert(res.msg)
+      let btn = document.getElementById('transferCryptoBtn');
+      btn.disabled = false;
+  })
+}
+
 function showAlert(type, message){
   let alert = document.getElementById("alert");
   alert.innerHTML = message;
@@ -94,7 +113,6 @@ function showAlert(type, message){
 function session_start(data){
   if (createSession(data)) {
     if(data.access_level == 'user' && data.status == 1){
-      console.log(data);
       redirect('./dashboard');
     }else if(data.access_level == 'admin' && data.status == 1){
       redirect('./admin/dashboard');

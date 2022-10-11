@@ -1,5 +1,9 @@
 .profile-tab {
-    margin: 100px 0px 0px 5%;
+    margin: 20px 0px 0px 20px;
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+    padding: 10px;
 }
 
 [data-tab-info] {
@@ -45,18 +49,22 @@
 
 .profile-info {
     background-color: #fff;
-    width           : 330px;
+    width           : 300px;
     height          : auto;
     border-radius   : 20px;
-    line-height     : 50px;
-    margin          : 12px 0;
-    padding         : 20px;
+    padding         : 20px 10px;
     box-shadow      : 0px 0px 5px 1px #ccc;
     /* text-align   : center; */
 }
 
 .profile-info-content {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    justify-content: center;
+    row-gap: 15px;
+    align-items: center;
+    color: #111;
 }
 
 .profile-info img {
@@ -66,17 +74,13 @@
     border-radius: 50%;
     padding      : 4px;
     margin       : 14px;
-    border       : 3px solid black;
+    border       : 3px solid #880fc4;
     box-shadow   : 0px 0px 5px 1px #ccc;
 }
 
 .profile-info h1 {
-    font-size  : 26px;
+    font-size  : large;
     font-weight: 600;
-}
-
-.profile-info h2 {
-    font-size: 20px;
 }
 
 .security-container {

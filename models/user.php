@@ -69,7 +69,8 @@ class User
     function emailExist($email)
     {
         $query = "SELECT * FROM " . $this->table_name . "
-            WHERE email = '{$email}'";
+            WHERE email = '{$email}'
+            LIMIT 0,1";
 
         $stmt = $this->conn->prepare($query);
 
@@ -92,5 +93,66 @@ class User
         }
 
         return false;
+    }
+
+    function readOne($user_id)
+    {
+        $query = "SELECT * FROM " . $this->table_name . "
+            WHERE id = '{$user_id}'
+            LIMIT 0,1";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->execute();
+        
+        $count = $stmt->rowCount();
+
+        if ($count > 0) {
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            $this->fullname = $row['fullname'];
+            $this->email = $row['email'];
+            $this->password = $row['password'];
+            $this->access_code = $row['access_code'];
+            $this->access_level = $row['access_level'];
+            $this->status = $row['status'];
+            $this->created = $row['created'];
+            $this->modified = $row['modified'];
+
+            return true;
+        }
+
+        return false;
+    }
+
+    function deleteAccount($email){
+        $query = "DELETE FROM " . $this->table_name . "
+            WHERE email = '{$email}'";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        return $stmt;
+    }
+
+    function readAll(){
+        $query = "SELECT * FROM " . $this->table_name . "
+        ORDER BY created ASC";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        return $stmt; 
+    }
+
+    function readAllUsers(){
+        $query = "SELECT * FROM " . $this->table_name . "
+        WHERE access_level = 'user'
+        ORDER BY created ASC";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        return $stmt;
     }
 }
