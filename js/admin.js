@@ -9,22 +9,20 @@ window.onload = function (){
         return res.json();
     })
     .then(res =>{
-        console.log(res);
-
         let users = document.getElementById("users_count");
         let referral = document.getElementById("referral_count");
         let withdrawal = document.getElementById("withdrawal_count");
-        let transactions = document.getElementById("transaction-table");
-        let deposits = document.getElementById("transaction-table");
+        let transactions = document.getElementById("transaction_count");
+        let wallet = document.getElementById("wallet_gross");
         let cashflow = document.getElementById("cashflow");
         
         if(res[1].state){
             users.innerText = res[0].users;
             referral.innerText = res[0].referral;
             withdrawal.innerText = "$" + res[0].withdrawals;
+            wallet.innerText = "$" + res[0].wallet_gross;
             cashflow.innerText = res[0].cashflow < 0 ? "- $" + -(parseInt(res[0].cashflow)) :  "$" + res[0].cashflow;
-            // withdrawal.innerText = "$" + res[0].wallet_gross;
-
+            transactions.innerText = res[0].transactions;
         }else{
             alert("Something went wrong! Try again.")
         }

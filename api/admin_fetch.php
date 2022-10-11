@@ -172,7 +172,7 @@
                     $group['withdrawals'] = $withdrawals;
                     $group['transactions'] = $user_count;
                     $group['cashflow'] = $cashflow;
-                    $group['wallet-gross'] = $wallet_gross;
+                    $group['wallet_gross'] = $wallet_gross;
                 }
     
                 $flags['state'] = true;
