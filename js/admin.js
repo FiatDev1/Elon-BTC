@@ -1,3 +1,28 @@
+function deleteAccount(email){
+    fetch(`../api/requests.php?request_type=delete_user&email=${email}`, {
+        method : "GET",
+        mode: 'no-cors',
+        cache: 'no-cache',
+        headers: { 'Content-type': 'application/json' }
+    })
+    .then(res =>{
+        return res.json();
+    })
+    .then(res =>{
+        if(res.state){
+            alert("Query OK. Column Has Been deleted!");
+            location.reload();
+        }else{
+            alert("Something went wrong! Try again.")
+        }
+    });
+}
+function confirmPrompt(email){
+    console.log(email);
+    if(confirm('Are you sure you want to delete this record?')){
+        deleteAccount(email);
+    }
+}
 window.onload = function (){
     fetch("../api/admin_fetch.php?request_type=dashboard_data", {
         method : "GET",
@@ -53,7 +78,7 @@ window.onload = function (){
                     <td>${res[0][i].access_level}</td>
                     <td class="action-btn">
                         <a href="#" class="action-btn check-btn"><i class="fas fa-check"></i></a>
-                        <a href="#ex1" rel="modal:open" class="action-btn delete-btn"><i class="fas fa-trash"></i></a>
+                        <a onclick="confirmPrompt('` + res[0][i].email + `')" class="action-btn delete-btn"><i class="fas fa-trash"></i></a>
                     </td>
                     <td>${res[0][i].created}</td>
                 </tr>`

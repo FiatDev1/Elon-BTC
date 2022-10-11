@@ -128,3 +128,23 @@ form {
 .form-field input::placeholder {
     font-size: 18px;
 }
+
+
+.wallet-address-label{
+    display: inline;
+}
+
+
+#wallet-address-text{
+    font-size: small;
+    color: #880fc4;
+    display: inline;
+    word-wrap: break-word;
+}
+
+.wallet_info{
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}

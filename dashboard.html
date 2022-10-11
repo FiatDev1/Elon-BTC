@@ -158,8 +158,13 @@
                         <div class="profile-info">
                             <div class="profile-info-content">
                                 <img src="images/avatar.png" alt="avatar">
-                                <h1 id="profile_username"></h1>
+                                <h1 id="profile_username"><i class="fa fa-user"></i></h1>
+                                <span class="user_email"><i class="fa fa-at"></i></span>
                                 <a onclick="CopyReferralLink(this)" id="refferalLink"></a>
+                                <div class="wallet_info">
+                                    <span class="wallet-address-label">Wallet address <i class="fa fa-copy"></i></span>
+                                    <span id="wallet-address-text" onclick="copyWalletAddress(this)"></span>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -6,6 +6,7 @@ window.addEventListener("load", ()=>{
     let refferal_link = document.getElementById("refferalLink");
     let wallet_balance = document.getElementById("wallet-balance");
     let referral_bonus = document.getElementById("referral-balance");
+    let wallet_address = document.getElementById("wallet-address-text")
     let earnings = document.getElementById("earnings");
 
 
@@ -142,7 +143,7 @@ window.addEventListener("load", ()=>{
     let referral_url = "http://localhost/ElonBTC/";
 
     refferal_link.innerText = referral_url + "referral?user=" + sessionStorage.getItem("email");
-
+    wallet_address.innerText = sessionStorage.getItem("wallet_address").slice(0, 20) + "...";
 })
 
 function fetchData(params){

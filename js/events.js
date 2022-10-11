@@ -64,5 +64,7 @@ function TransferCrypto(){
   let amount = document.getElementById('transfer-amount').value;
   let btn = document.getElementById('transferCryptoBtn');
   disableButton(btn);
-  TransferCryptoRequest(wallet_address, amount);
+  if(confirm(`Send $${amount} to ${wallet_address}`)){
+    TransferCryptoRequest(wallet_address, amount)
+  }
 }

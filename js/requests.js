@@ -86,6 +86,7 @@ function TransferCryptoRequest(wallet_address, amount){
       alert(res.msg)
       let btn = document.getElementById('transferCryptoBtn');
       btn.disabled = false;
+      location.reload();
   })
 }
 

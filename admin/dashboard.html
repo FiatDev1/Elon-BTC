@@ -51,7 +51,6 @@
                 <a href="#referrals" class="sidebar-links"><i class="fas fa-arrows-down-to-people"></i> Manage Referrals</a>
                 <a href="#deposit" class="sidebar-links"><i class="fa fa-wallet"></i> User Deposit</a>
                 <a href="#withdrawal" class="sidebar-links"><i class="fa fa-download"></i> User Withdrawal</a>
-                <a href="#" class="sidebar-links"><i class="fa fa-bell"></i> Send Notification</a>
                 <a onclick="Logout()" class="sidebar-links"><i class="fa fa-arrow-right-from-bracket"></i> Logout</a>
             </div>
         </div>
@@ -69,7 +68,6 @@
                 <a href="#referrals" class="sidebar-links"><i class="fa fa-arrows-down-to-people"></i> Manage Referrals</a>
                 <a href="#deposit" class="sidebar-links"><i class="fa fa-wallet"></i> User Deposit</a>
                 <a href="#withdrawal" class="sidebar-links"><i class="fas fa-download"></i> User Withdrawal</a>
-                <a href="#withdrawal" class="sidebar-links"><i class="fa fa-bell"></i> Send Notification</a>
                 <a onclick="Logout()" class="sidebar-links"><i class="fa fa-arrow-right-from-bracket"></i> Logout</a>
             </div>
         </div>
@@ -356,13 +354,11 @@
         </div><br>
         <div class="modal-content-del">Are you sure you want to delete this record?</div>
         <div class="modal-buttons">
-            <a href="#" class="action-btn check-btn">Yes</a>
-            <a href="#" rel="modal:close" class="action-btn delete-btn">No</a>
+            <a onclick="deleteAccount()" id="delete-user-btn" data-delete-param="" rel="modal:close" class="action-btn check-btn">Yes</a>
+            <a rel="modal:close" class="action-btn delete-btn">No</a>
         </div>
 
     </div>
-
-
 </body>
 
 
